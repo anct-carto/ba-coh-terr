@@ -1,0 +1,66 @@
+﻿Facteur de cohésion : Capacités de développement
+Thème : Couverture numérique
+Indicateur : Part des locaux éligibles au Très Haut Débit
+
+
+Page 1 (France)
+
+CAPACITES DE DEVELOPPEMENT
+Couverture numérique
+Permettre à tous, dans tous les territoires, d’avoir accès à une connexion à Internet de qualité.
+
+
+Part des locaux éligibles au Très Haut Débit
+C’est la proportion de logements et de locaux professionnels pouvant, sous réserve d’un abonnement adéquat, bénéficier d’une connexion internet Très Haut Débit.
+
+Plus…
+Il s’agit d’un débit descendant supérieur à 30 Mb/s, grâce aux technologies filaires de type FTTLa ou FTTH. Ce débit est une valeur théorique, qui correspond au débit maximal que la ligne peut effectivement atteindre.
+
+Texte « aide à la lecture »
+En juin 2016, 48,4% des locaux étaient éligibles au THD ; ce chiffre était de 44,6% un an plus tôt. 
+
+
+
+Page 2 (Régions)
+
+Texte « qualitatif »
+
+L’accès au Très Haut Débit a progressé dans toutes les régions. De très fortes disparités perdurent, qui tentent toutefois à se résorber du fait d’un déploiement de la fibre optique plus rapide dans les régions les moins bien dotées. 
+En Ile-de-France, près des trois quarts des locaux sont éligibles au Très Haut Débit. En Bourgogne-Franche-Comté, ce taux est plus de deux fois plus faible (34,6% des locaux en 2016) ; en Corse, région de France métropolitaine la moins bien dotée, il atteint tout juste les 25%. 
+
+Aide à la lecture…
+La part de locaux éligibles au THD variait dans un rapport de 1 à 3,2 entre les régions de France métropolitaine en 2015 ; il varie dans un rapport de  1 à 2,9 en 2016.
+
+
+
+
+
+
+Page 3 (infra-régional)
+
+Texte « qualitatif »
+Au niveau des EPCI, les écarts de couverture numérique ont également tendance à se réduire.
+Le clivage principal s’observe entre espaces peu densément peuplés ou enclavés et espaces urbains. Même les contrastes régionaux, réels, reflètent cette coupure rural / urbain, les régions les moins bien équipées étant les plus rurales. 
+Les efforts importants entrepris depuis 2003 sur le mobile et depuis 2010 sur le fixe apportent des résultats encore insuffisamment tangibles pour les usagers finaux. 
+
+
+Aide à la lecture…
+Le rapport interdécile est passé de 3,4 à 3,1 entre 2015 et 2016.
+Le rapport interdécile de la part des locaux éligibles au THD est le ratio entre la proportion D9 tel que 10% des EPCI se situent au-dessus et le revenu D1 tel que 10% des EPCI se situent en dessous.
+
+
+
+Page 4 (ZAU)
+
+Texte « qualitatif »
+xxxxxxxxxxxxxxxx
+
+
+Aide à la lecture…
+
+
+
+
+
+
+

@@ -1,0 +1,242 @@
+/*...............................................................
+......########..######..########.....###....##....##..######......
+......##.......##....##.##.....##...##.##...###...##.##....##.....
+......##.......##.......##.....##..##...##..####..##.##...........
+......######...##.......########..##.....##.##.##.##..######......
+......##.......##.......##...##...#########.##..####.......##.....
+......##.......##....##.##....##..##.....##.##...###.##....##.....
+......########..######..##.....##.##.....##.##....##..######......
+...............................................................*/
+/* Applicable pour tous écrans*/
+
+@media all{
+
+
+  /* Evite de dépasser le conteneur */
+  img, embed, object, video{
+    max-width: 100%;
+  }
+
+  body{
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right:2em;
+  }
+
+
+
+  /* Sur smartphone, évite la selection au toucher*/
+    .non_selection{
+      -webkit-tap-highlight-color:transparent; /*Pour chrome sous Android*/
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none; /*Pour mozilla sous Android*/
+    }
+
+  /* Mise en page accueil*/
+  .conteneur_accueil{
+    width:100%;
+    display:flex;
+  }
+
+  .niv1{
+    display: none;
+    opacity: 0;
+  }
+
+  #accueil_arc:hover{
+    cursor:pointer;
+  }
+
+
+  .texte_facteur{
+    font-size: 1.5em;
+    font-family: latobold;
+    padding: 0.2em 0.3em 0.3em 0.3em;
+    margin-bottom: 0.5em;
+    color:#fff;
+    border-radius: 6px;
+  }
+
+  .texte_theme{
+    font-size: 1.2em;
+    font-family: latomedium;
+    padding: 0em 0em 0.3em 0em;
+    color:#595959;
+  }
+
+  .niv3{
+    font-size: 1em;
+    font-family: latomedium;
+    padding: 0em 0em 0.3em 1em;
+    color:#595959;
+  }
+
+  .niv3:hover{
+    cursor: pointer;
+  }
+
+    #accueil_facteur1:hover{
+      fill:#8a1344;
+    }
+
+    #accueil_facteur2:hover{
+      fill:#e94e1b;
+    }
+
+    #accueil_facteur3:hover{
+      fill:#e39b00;
+    }
+
+    #accueil_facteur4:hover{
+      fill:#95c11f;
+    }
+
+    #accueil_facteur5:hover{
+      fill:#008d36;
+    }
+
+    #accueil_facteur6:hover{
+      fill:#004a7b;
+    }
+
+    /* Mise en page résumé*/
+    .mon_resume p:first-of-type{
+      display: block;
+      font-size: 1.8em;
+      font-family: latoblack;
+      text-align: center;
+      color:#595959;
+    }
+
+    .mon_resume span{
+      font-size:1.5em;
+    }
+
+    /*Les items de la liste*/
+    ul{
+      list-style: none;
+      padding-left: 0.5em;
+    }
+
+    li{
+      font-size: 1.1em;
+      font-family: latomedium;
+    }
+
+    li::before{
+      content:"";
+      display:inline-block;
+      border-radius: 40%;
+      width:2em;
+      height: 0.6em;
+
+    }
+
+    li:nth-child(1)::before{
+      background: #8a1344;
+    }
+
+    li:nth-child(2)::before{
+      background: #e94e1b;
+    }
+
+    li:nth-child(3)::before{
+      background: #c18400;
+    }
+
+    li:nth-child(4)::before{
+      background: #739518;
+    }
+
+    li:nth-child(5)::before{
+      background: #008d36;
+    }
+
+    li:nth-child(6)::before{
+      background: #004a7b;
+    }
+
+    /* Mise en forme du boutton*/
+    #button_launch{
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 1px;
+      cursor:pointer;
+    }
+
+
+    /*Alignement titre droit*/
+    .mon_accueil_droit{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+}
+
+
+
+/*...............................................................
+.......########..##.....##.########..########....###....##.....##.....
+.......##.....##.##.....##.##.....##.##.........##.##...##.....##.....
+.......##.....##.##.....##.##.....##.##........##...##..##.....##.....
+.......########..##.....##.########..######...##.....##.##.....##.....
+.......##.....##.##.....##.##...##...##.......#########.##.....##.....
+.......##.....##.##.....##.##....##..##.......##.....##.##.....##.....
+.......########...#######..##.....##.########.##.....##..#######......
+...............................................................*/
+/* Si supérieur à 440px, appliquer le style suivant */
+/* Pour les écrans d'ordinateur*/
+
+
+@media only screen and (min-width:960px){
+
+  /* Mise en page accueil*/
+  .conteneur_accueil{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .mon_accueil_gauche, .mon_accueil_droit{
+    width:30%;
+  }
+
+
+}
+
+/*...............................................................
+......##.....##..#######..########..####.##.......########.....
+......###...###.##.....##.##.....##..##..##.......##...........
+......####.####.##.....##.##.....##..##..##.......##...........
+......##.###.##.##.....##.########...##..##.......######.......
+......##.....##.##.....##.##.....##..##..##.......##...........
+......##.....##.##.....##.##.....##..##..##.......##...........
+......##.....##..#######..########..####.########.########.....
+...............................................................*/
+/* Si inférieur à 440px, appliquer le style suivant */
+/* Pour les smartphones en mode portrait*/
+
+
+@media only screen and (max-width:960px){
+
+  /* Mise en page accueil*/
+  .conteneur_accueil{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mon_accueil_gauche, .mon_accueil_droit{
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+  }
+
+
+  .mon_contenu{
+    margin-top: 10%;
+  }
+
+
+}
