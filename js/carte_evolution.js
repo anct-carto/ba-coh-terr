@@ -34,7 +34,7 @@ let afficherCarteEvolution = (cheminData)=>{
   path.projection(projection);
 
   color = d3.scaleQuantile()
-      .range(paletteCouleur);
+      .range(maPaletteCouleur);
 
   //Chargement du json et du csv
   promises1 = d3.json("data/json/ze_WGS84_UTF8.topojson");
@@ -309,6 +309,11 @@ let afficherCarteEvolution = (cheminData)=>{
 
   }); //fin de Promise
 
+//Style bouton
+  d3.select("#boutoncarte1")
+      .style("background-color", maPaletteCouleur[4])
 
+  d3.select("#boutoncarte2")
+      .style("background-color", maPaletteCouleur[4])
 
 }; //fin de la fonction afficherCarteEvolution

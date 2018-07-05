@@ -349,54 +349,6 @@ fetch(cheminMonTexte).then(function(reponse) {
 ...###....####.########.
 */
 
-/*Couleur histogramme*/
-
-let maCouleurHisto = "#fff"
-  switch(levelTitreFacteur){
-    case 0:
-      maCouleurHisto = colorTheme1;
-      paletteCouleur = color5Theme2;
-      document.getElementById("bouton1").style.backgroundColor = colorTheme1;
-      document.getElementById("boutoncarte1").style.backgroundColor = colorTheme2;
-      document.getElementById("boutoncarte2").style.backgroundColor = colorTheme2;
-      break;
-    case 1:
-      maCouleurHisto = colorTheme2;
-      paletteCouleur = color5Theme5;
-      document.getElementById("bouton1").style.backgroundColor = colorTheme2;
-      document.getElementById("boutoncarte1").style.backgroundColor = colorTheme5;
-      document.getElementById("boutoncarte2").style.backgroundColor = colorTheme5;
-      break;
-    case 2:
-      maCouleurHisto = colorTheme3;
-      paletteCouleur = color5Theme6;
-      document.getElementById("bouton1").style.backgroundColor = colorTheme3;
-      document.getElementById("boutoncarte1").style.backgroundColor = colorTheme6;
-      document.getElementById("boutoncarte2").style.backgroundColor = colorTheme6;
-      break;
-    case 3:
-      maCouleurHisto = colorTheme4;
-      paletteCouleur = color5Theme3;
-      document.getElementById("bouton1").style.backgroundColor = colorTheme4;
-      document.getElementById("boutoncarte1").style.backgroundColor = colorTheme3;
-      document.getElementById("boutoncarte2").style.backgroundColor = colorTheme3;
-      break;
-    case 4:
-      maCouleurHisto = colorTheme5;
-      paletteCouleur = color5Theme1;
-      document.getElementById("bouton1").style.backgroundColor = colorTheme5;
-      document.getElementById("boutoncarte1").style.backgroundColor = colorTheme1;
-      document.getElementById("boutoncarte2").style.backgroundColor = colorTheme1;
-      break;
-    case 5:
-      maCouleurHisto = colorTheme6;
-      paletteCouleur = color5Theme4;
-      document.getElementById("bouton1").style.backgroundColor = colorTheme6;
-      document.getElementById("boutoncarte1").style.backgroundColor = colorTheme4;
-      document.getElementById("boutoncarte2").style.backgroundColor = colorTheme4;
-      break;
-  };
-
 /*Légende carte*/
 let choixUnite = ["€","%","‰"];
 
@@ -419,60 +371,206 @@ let sousTitreLegende = ["En euros, par zone d'emploi",
 "En ‰ par département"];
 
 
-switch(levelTitreFacteur){
-  case 0:
+/*Légende graphique barometre*/
+
+let valeurBarometre = [];
+
+const valeurBarometre11 = ["17k","18k","19k","20k","21k","22k","23k"];
+const valeurBarometre15 = [10,15,20,25,30,35,40];
+const valeurBarometre21 = [0,4,8,12,16,20,24];
+const valeurBarometre24 = [21,28,35,42,49,56,63];
+const valeurBarometre31 = [-1.2,-.7,-.2,.3,.8,.3,1.8];
+const valeurBarometre44 = [12,17,22,27,32,37,42];
+const valeurBarometre46 = [7,20,33,46,59,72,85];
+const valeurBarometre51 = [2,4,6,8,10,12,14];
+const valeurBarometre53 = [30,40,50,60,70,80,90];
+const valeurBarometre61 = [20,25,30,35,40,45,50];
+const valeurBarometre65 = [22,25,28,31,34,37,40];
+
+
+let d0 = ""
+let d1 = ""
+
+const d0_11 = "M59.33,61.83,57.71,18l9.55,42.77a4,4,0,0,1-7.84,1.75A4.55,4.55,0,0,1,59.33,61.83Z"
+const d1_11 = "M59.86,60.67,73.31,8.4,66.74,62a3.51,3.51,0,0,1-7-.85A2.23,2.23,0,0,1,59.86,60.67Z"
+const d0_15 = "M61.43,64.86l-39-25.09,42.75,18A4,4,0,0,1,62,65.18,4.42,4.42,0,0,1,61.43,64.86Z"
+const d1_15 = "M60.92,63.88,22.47,23.4,65.68,58.76a3.5,3.5,0,1,1-4.44,5.42A3.06,3.06,0,0,1,60.92,63.88Z"
+const d0_21 = "M59.77,59.43,83.84,22.89l-17,40.32a4,4,0,0,1-7.4-3.13A5.07,5.07,0,0,1,59.77,59.43Z"
+const d1_21 = "M60.93,58.74,103.44,24.4,65.67,63.9a3.51,3.51,0,0,1-5.07-4.85A3.19,3.19,0,0,1,60.93,58.74Z"
+const d0_24 = "M59.32,61.75,58.66,18l8.61,43a4,4,0,1,1-7.87,1.57A3.53,3.53,0,0,1,59.32,61.75Z"
+const d1_24 = "M59.85,60.74,72.25,8.21,66.75,61.9a3.51,3.51,0,0,1-7-.71C59.79,61,59.82,60.88,59.85,60.74Z"
+const d0_31 = "M59.31,61.63l.6-43.76L67.28,61a4,4,0,1,1-7.91,1.35A4.49,4.49,0,0,1,59.31,61.63Z"
+const d1_31 = "M59.9,62.17,50.09,8.71l16.6,51.76A3.51,3.51,0,0,1,60,62.61C60,62.47,59.93,62.31,59.9,62.17Z"
+const d0_44 = "M60.55,58.41,95.36,31.07,66,64.23a4,4,0,1,1-6-5.32A4.14,4.14,0,0,1,60.55,58.41Z"
+const d1_44 = "M60.75,58.92l39.9-37.14L65.84,63.72a3.5,3.5,0,1,1-5.39-4.48A3.06,3.06,0,0,1,60.75,58.92Z"
+const d0_46 = "M59.31,61.61l.86-43.75L67.29,61a4,4,0,0,1-7.93,1.31A3.64,3.64,0,0,1,59.31,61.61Z"
+const d1_46 = "M59.93,60.38,77.78,9.44,66.67,62.26a3.5,3.5,0,0,1-6.86-1.44A3.17,3.17,0,0,1,59.93,60.38Z"
+const d0_51 = "M63.31,64.82,11,61.46l52.25-3.64a3.51,3.51,0,0,1,.49,7A3.69,3.69,0,0,1,63.31,64.82Z"
+const d1_51 = "M59.87,60.61l14.42-52L66.73,62a3.51,3.51,0,1,1-7-1C59.8,60.91,59.84,60.74,59.87,60.61Z"
+const d0_53 = "M61.52,57.73l42-16.29L65.07,64.91a4,4,0,0,1-4.19-6.86A6.36,6.36,0,0,1,61.52,57.73Z"
+const d1_53 = "M61.45,58.35l48.47-26L65.14,64.29a3.51,3.51,0,0,1-4.07-5.71A3.85,3.85,0,0,1,61.45,58.35Z"
+const d0_61 = "M59.3,61.11,65.56,17.8l1.73,43.73a4,4,0,0,1-8,.32A4.47,4.47,0,0,1,59.3,61.11Z"
+const d1_61 = "M59.82,61,68.53,7.7l-1.75,54a3.51,3.51,0,1,1-7-.23A3.44,3.44,0,0,1,59.82,61Z"
+const d0_65 = "M59.3,61.08l6.57-43.15,1.42,43.63a4,4,0,0,1-8,.26A4.59,4.59,0,0,1,59.3,61.08Z"
+const d1_65 = "M60.06,60,83.63,11.27,66.54,62.64a3.51,3.51,0,1,1-6.65-2.22A2.17,2.17,0,0,1,60.06,60Z"
+
+let coord = [];
+
+const coord11 = ["55.32","1.71","73.34","2.76"]
+const coord15 = ["9.49","29.28","18.65","17.56"]
+const coord21 = ["90.23","6.48","106.67","17.78"]
+const coord24 = ["56.61","1.71","72.22","2.42"]
+const coord31 = ["58.25","1.71","48.44","3.16"]
+const coord44 = ["105.95","17.13","103.66","14.86"]
+const coord46 = ["58.36","1.71","78.06","3.41"]
+const coord51 = ["62.46","59.77","74.24","2.02"]
+const coord53 = ["117.1","31.01","114.15","26.31"]
+const coord61 = ["65.53","1.71","68.05","1.71"]
+const coord65 = ["66.15","1.71","84.6","5.41"]
+
+console.log(memoireNiv3);
+switch(memoireNiv3){
+  case "0":
     titreLegende = titreLegende[0];
     sousTitreLegende = sousTitreLegende[0];
     choixUnite = choixUnite[0];
+    d0 = d0_11;
+    d1 = d1_11;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre11);
+    Array.prototype.push.apply(coord,coord11);
     break;
-  case 1:
+  case "1":
     titreLegende = titreLegende[1];
     sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
+    d0 = d0_15;
+    d1 = d1_15;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre15);
+    Array.prototype.push.apply(coord,coord15);
     break;
-  case 2:
+  case "2":
     titreLegende = titreLegende[2];
     sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
+    d0 = d0_21;
+    d1 = d1_21;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre21);
+    Array.prototype.push.apply(coord,coord21);
     break;
-  case 3:
+  case "3":
     titreLegende = titreLegende[3];
     sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
+    d0 = d0_24;
+    d1 = d1_24;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre24);
+    Array.prototype.push.apply(coord,coord24);
     break;
-  case 4:
+  case "4":
     titreLegende = titreLegende[4];
     sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
+    d0 = d0_31;
+    d1 = d1_31;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre31);
+    Array.prototype.push.apply(coord,coord31);
     break;
-  case 5:
+  case "5":
     titreLegende = titreLegende[5];
     sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
+    d0 = d0_44;
+    d1 = d1_44;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre44);
+    Array.prototype.push.apply(coord,coord44);
     break;
-  case 6:
+  case "6":
     titreLegende = titreLegende[6];
     sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
+    d0 = d0_46;
+    d1 = d1_46;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre46);
+    Array.prototype.push.apply(coord,coord46);
     break;
-  case 7:
+  case "7":
     titreLegende = titreLegende[7];
     sousTitreLegende = sousTitreLegende[4];
     choixUnite = choixUnite[2];
+    d0 = d0_51;
+    d1 = d1_51;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre51);
+    Array.prototype.push.apply(coord,coord51);
     break;
-  case 8:
+  case "8":
     titreLegende = titreLegende[8];
     sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
+    d0 = d0_53;
+    d1 = d1_53;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre53);
+    Array.prototype.push.apply(coord,coord53);
     break;
-  case 9:
+  case "9":
+    choixUnite = choixUnite[1];
+    d0 = d0_61;
+    d1 = d1_61;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre61);
+    Array.prototype.push.apply(coord,coord61);
 
     break;
-  case 10:
-
-              break;
+  case "10":
+    choixUnite = choixUnite[1];
+    d0 = d0_65;
+    d1 = d1_65;
+    Array.prototype.push.apply(valeurBarometre,valeurBarometre65);
+    Array.prototype.push.apply(coord,coord65);
+    break;
 
 };
+
+
+
+/*Couleur histogramme*/
+/*Afficher graphique barometre*/
+
+let maCouleurHisto = "#fff"
+let monDegrade = ""
+let maPaletteCouleur = ""
+
+  switch(levelTitreFacteur){
+    case 0:
+      maCouleurHisto = colorTheme1;
+      maPaletteCouleur = color5Theme2;
+      monDegrade = degrade1
+      break;
+    case 1:
+      maCouleurHisto = colorTheme2;
+      maPaletteCouleur = color5Theme5;
+      monDegrade = degrade2
+      break;
+    case 2:
+      maCouleurHisto = colorTheme3;
+      maPaletteCouleur = color5Theme6;
+      monDegrade = degrade3
+      break;
+    case 3:
+      maCouleurHisto = colorTheme4;
+      maPaletteCouleur = color5Theme3;
+      monDegrade = degrade4
+      break;
+    case 4:
+      maCouleurHisto = colorTheme5;
+      maPaletteCouleur = color5Theme1;
+      monDegrade = degrade5
+      break;
+    case 5:
+      maCouleurHisto = colorTheme6;
+      maPaletteCouleur = color5Theme4;
+      monDegrade = degrade6
+      break;
+  };
+
 
 
 
@@ -498,6 +596,12 @@ ioHisto.observe(document.querySelector('.mon_histogramme'));
 }
 
 
+
+
+
+
+
+afficherBarometre()
 afficherCarteEvolution(cheminMaCarte);
 afficherCarte(cheminMaCarte);
 

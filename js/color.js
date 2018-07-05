@@ -1,5 +1,13 @@
 //Echelle de couleur
 
+const degrade1 = ['#f4b4d1','#cc789d','#a8426d','#92204f','#891344'];
+const degrade2 = ['#fbd7c3','#f0a385','#e6754e','#e0592c','#de4e1f'];
+const degrade3 = ['#ffeacb','#fbe1ba','#efc269','#e6ab32','#de9803'];
+const degrade4 = ['#e8f0d4','#c7db99','#a5c45b','#90b635','#88b126'];
+const degrade5 = ['#d1e0c8','#b1d3b2','#66b57f','#2fa059','#008d39'];
+const degrade6 = ['#bac6e0','#b1c0db','#668eb2','#2f6994','#004a7a'];
+
+
 const bronze5 = ["#f55353","#f5bc76","#e89c3f","#ad5f00","#693d07"];
 const red5 = ["#fad4d4","#fab6b6","#fa8e8e","#de1b1b","#8f0e0e"];
 const green5 = ["#abedc5","#7ddba3","#57c282","#2a854e","#1a5230"];

@@ -152,27 +152,10 @@ let afficherHistogramme = (cheminData, couleurHisto) =>{
 
 
      //Couleur div texte popup
-     let popupYear1 = document.getElementsByClassName("mon_popup_histogramme")[0];
-     switch(levelTitreFacteur){
-       case 0:
-         popupYear1.lastElementChild.style.color = colorTheme1;
-         break;
-       case 1:
-         popupYear1.lastElementChild.style.color = colorTheme2;
-         break;
-       case 2:
-         popupYear1.lastElementChild.style.color = colorTheme3;
-         break;
-       case 3:
-         popupYear1.lastElementChild.style.color = colorTheme4;
-         break;
-       case 4:
-         popupYear1.lastElementChild.style.color = colorTheme5;
-         break;
-       case 5:
-         popupYear1.lastElementChild.style.color = colorTheme6;
-         break;
-     };
+
+
+     d3.select(".mon_popup_histogramme>div:last-child")
+       .style("color",couleurHisto)
 
 
 
@@ -255,7 +238,6 @@ let afficherHistogramme = (cheminData, couleurHisto) =>{
           .data(data)
           .html(function(d){return d.year1})
 
-
         //Passage souris couleur histo bar1
         g1.selectAll(".bar1")
         .on("mouseover", function(){
@@ -296,5 +278,11 @@ let afficherHistogramme = (cheminData, couleurHisto) =>{
 
 
 
-  });
-};
+  }); //d3 data
+
+//Style bouton1
+d3.select("#bouton1")
+    .style("background-color", couleurHisto)
+
+
+}; //fonction afficherHistogramme
