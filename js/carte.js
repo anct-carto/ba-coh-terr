@@ -3,14 +3,13 @@
 let afficherCarte=(cheminData)=>{
 
   let w = 600;
-  let h = 550;
-  let view = [0,0,600,550];
+  let h = 350;
+  let view = [0,0,600,350];
 
 
   //Sélection de l'élément html
   let svgCarte = d3.select(".carte")
       .attr("width", "100%")
-      .attr("height", h)
       .attr("preserveAspectRatio","xMidYMid meet")
       .attr("viewBox", `${view[0]},${view[1]},${view[2]},${view[3]}`);
 
@@ -23,7 +22,7 @@ let afficherCarte=(cheminData)=>{
   //Création de l'objet path pour manipuler les données GeoJSON
   let projection = d3.geoConicConformal()
       .center([1.282743, 46.328377])
-      .scale(2600)
+      .scale(1600)
       .translate([w / 2, h / 2]);
 
   let path = d3.geoPath()

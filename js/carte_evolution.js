@@ -3,6 +3,10 @@ let etatBoutonCarte2 = true;
 
 let afficherCarteEvolution = (cheminData)=>{
 
+  //Si une seule année
+  let uneAnnee = false;
+
+
   w = 600;
   h = 550;
   view = [0,0,600,550];
@@ -11,7 +15,7 @@ let afficherCarteEvolution = (cheminData)=>{
   //Sélection de l'élément html
   let svgCarteEvolution = d3.select(".carte_evolution")
       .attr("width", "100%")
-      .attr("height", h)
+
       .attr("preserveAspectRatio","xMidYMid meet")
       .attr("viewBox", `${view[0]},${view[1]},${view[2]},${view[3]}`);
 
@@ -37,8 +41,9 @@ let afficherCarteEvolution = (cheminData)=>{
       .range(maPaletteCouleur);
 
   //Chargement du json et du csv
-  promises1 = d3.json("data/json/ze_WGS84_UTF8.topojson");
+  promises1 = d3.json(cheminMaCarteJSON);
   promises2 = d3.csv(cheminData);
+
 
   Promise.all([promises1, promises2]).then(function(fr){
 
@@ -46,7 +51,7 @@ let afficherCarteEvolution = (cheminData)=>{
 
   //Fusion du json et du csv
 
-  let featureCollection = topojson.feature(fr[0],fr[0].objects.ze_WGS84_UTF8)
+  let featureCollection = topojson.feature(fr[0],fr[0].objects.fr_wgs84_utf8)
 
   for (var i=0; i< fr[1].length;i++){
     var csvId = fr[1][i].codgeo;
@@ -66,9 +71,31 @@ let afficherCarteEvolution = (cheminData)=>{
     }
   }
 
+  //Coerce numérique
+  fr[1].forEach(function(d) {
+    d.value0 = +d.value0;
+    d.value1 = +d.value1;
+  });
 
-    //Création de la carte
-    update("value0")
+
+
+
+
+    //Si une seule année
+    if (d3.mean(fr[1].map(function(d){return d.value0}))===undefined){
+      uneAnnee = true;
+    } else {
+      uneAnnee = false;
+      }
+
+    //Condition une seule année
+    uneAnnee ? (
+      document.getElementById("boutoncarte0").style.display="none",
+      update("value1")
+    ):(
+      document.getElementById("boutoncarte1").style.display="flex",
+      update("value0")
+    );
 
 
 
@@ -80,9 +107,7 @@ let afficherCarteEvolution = (cheminData)=>{
     //Fonction création de tous les éléments de la carte
     function update(dataValue){
 
-      color.domain([
-        12000,17500,19500,21500,23500,29000
-      ]);
+      color.domain(discretisation);
 
       svgCarteEvolution
         .selectAll("path")
@@ -97,7 +122,9 @@ let afficherCarteEvolution = (cheminData)=>{
         .attr("d", path)
         .style("fill", function(d){
           var value = d.properties[dataValue];
-          return value? color(value):"#ccc";
+          return value? color(value)
+                 :value===0 ? color(value)
+                 :"#ccc"
         });
 
         let highlighted = "";
@@ -105,7 +132,7 @@ let afficherCarteEvolution = (cheminData)=>{
         //Contour des ze
         svgCarteEvolution.append("path")
           .attr("class", "dep_contour")
-          .datum(topojson.mesh(fr[0], fr[0].objects.ze_WGS84_UTF8, function(a, b) { return a.properties.codgeo !== b.properties.codgeo; }))
+          .datum(topojson.mesh(fr[0], fr[0].objects.fr_wgs84_utf8, function(a, b) { return a.properties.codgeo !== b.properties.codgeo; }))
           .attr("d", path);
 
         //Contour des régions
@@ -208,7 +235,8 @@ let afficherCarteEvolution = (cheminData)=>{
           })
           .attr("dy", "0.8em") //place text one line *below* the x,y point
           .style("font-family","latomedium")
-          .style("font-size","0.9em")
+          .style("font-size","0.8em")
+          .style("fill","#595959")
           .text(function(d,i) {
               var extent = color.invertExtent(d);
               //extent will be a two-element array, format it however you want:
@@ -288,10 +316,11 @@ let afficherCarteEvolution = (cheminData)=>{
     //Ajout texte légende
     svgCarteEvolution.append("text")
       .attr("x", 5)
-      .attr("y",10)
+      .attr("y",13)
       .attr("text-anchor","start")
       .style("font-family","latomedium")
-      .style("font-size","1em")
+      .style("font-size","0.9em")
+      .style("fill","#595959")
       .text(titreLegende);
 
       svgCarteEvolution.append("text")
@@ -299,7 +328,8 @@ let afficherCarteEvolution = (cheminData)=>{
         .attr("y",30)
         .attr("text-anchor","start")
         .style("font-family","latomedium")
-        .style("font-size","0.9em")
+        .style("font-size","0.8em")
+        .style("fill","#595959")
         .text(sousTitreLegende);
 
 

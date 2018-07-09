@@ -1,14 +1,12 @@
-Ea sunt quisquam vitae dignissimos.
-Et voluptatibus adipisci veniam illum. Velit optio qui quis qui rerum culpa sit.
-Labore consequatur sit ipsa provident vel doloribus. Dolorum placeat facere autem velit vitae nesciunt quisquam atque. Voluptatum et molestiae molestias. Ut repudiandae at reprehenderit quas. Omnis assumenda aut unde. Earum in voluptates neque. Illo aut dolores modi. Quod quae suscipit possimus eum.
+﻿<strong>C’est le rapport entre la fiscalité levée par un EPCI et la totalité de la fiscalité levée sur son territoire par les communes et par lui-même.</strong>
+Un EPCI avec un coefficient proche de 1 est un EPCI où les impôts locaux sont  pour la plupart prélevés au niveau de l’EPCI. Un EPCI avec  un coefficient proche de 0 est un EPCI où les impôts locaux sont presque en totalité prélevés par les communes. Le CIF permet de mesurer la part des compétences locales exercées au niveau d’un établissement de coopération intercommunale et transférées par les communes, selon un principe assez simple selon lequel plus les communes auront transféré de pouvoir fiscal au groupement, plus on peut supposer qu'elles lui auront également transféré des compétences.
 
-Nihil eum expedita repudiandae. Voluptas delectus quasi sint voluptatem quia repellat. Error aut aliquam totam. Rerum tempore esse in vitae fugiat quia. Omnis explicabo aspernatur suscipit ut. Voluptatum molestiae reprehenderit quisquam laudantium porro temporibus facilis neque.
+L’intégration fiscale au sein des EPCI a légèrement augmenté entre 2016 et 2018.
 
-Odio nostrum et et.
-Omnis perferendis accusantium commodi iure. Accusantium quia autem molestias aspernatur. Labore consequatur sit ipsa provident vel doloribus. Dolorum placeat facere autem velit vitae nesciunt quisquam atque.
+Les contrastes entre régions ont très légèrement diminué entre 2016 et 2018. Onze régions ont vu leur coefficient augmenter, parfois de manière très significative : Bourgogne et Franche-Comté +3,4 points de pourcentage, Corse +3,7 points et surtout la Guadeloupe +9,4 points. Sept régions ont un coefficient en baisse, mais pour la plupart de moins de 1%.
+En 2016, il y avait 18,24 points de pourcentage d’écart entre la région où le coefficient est en moyenne le plus important et celle où il est le plus faible ; cet écart est de 18,08 points en 2018.
 
-Velit optio qui quis qui rerum culpa sit.
-Qui earum voluptas provident vero consequuntur aliquam. Qui dignissimos a corrupti est qui. Dolorum impedit vitae non excepturi non. Molestiae fuga sunt vero laborum voluptatem eos blanditiis. Labore consequatur sit ipsa provident vel doloribus. Dolorum placeat facere autem velit vitae nesciunt quisquam atque.
-
-Voluptas velit sunt eius asperiores est impedit quam asperiores.
-Omnis assumenda aut unde. Earum in voluptates neque. Illo aut dolores modi. Quod quae suscipit possimus eum. Eligendi consequuntur saepe accusamus cupiditate expedita.
+A l’échelle des EPCI, les disparités d’intégration fiscale se sont réduites. Cela s’explique autant par une augmentation du coefficient des EPCI pour lesquelles il était le plus faible (le premier décile passe de 24,3% à 27,3%) que par une baisse du coefficient des EPCI les plus intégrés (le neuvième décile passe de 53,4% à 50,8%). Il faut cependant noter que l’on ne parle pas forcément des mêmes EPCI sur les deux années du fait de l’importante redéfinition de cet échelon territorial, avec un passage de 2 063 intercommunalités en 2016 à 1 264 en 2018.
+Le rapport interdécile est passé de 2,2 à 1,9 au cours de la période.
+Le coefficient d’intégration fiscal est fortement lié à la densité des EPCT (définie ici à partir de la grille de densité de l’Insee) : plus un EPCI est dense, moins il est intégré.
+Les EPCI dont le coefficient d’intégration fiscal est le plus important (41,1% en moyenne) sont la centaine d’EPCI très peu denses. Les EPCI peu denses (deux tiers des EPCI) ont un coefficient moyen de 37,3%. Les EPCI de densité intermédiaire ne sont que 230 mais représentent près d’un quart de la population, ils ont un coefficient moyen de 36,2%, valeur supérieure à celle de la grosse soixantaine d’EPCI denses : 34,7% en moyenne pour 40% de la population nationale habitant dans ces intercommunalités.

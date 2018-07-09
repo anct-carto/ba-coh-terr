@@ -13,6 +13,97 @@ let afficherBarometre = ()=>{
     .attr("viewBox","0 0 124.95 77.33");
 
 
+svgBarometre.append("polyline")
+  .attr("points","0.01 59.8 124.93 59.8 124.93 65.72 0.01 65.72")
+
+svgBarometre.append("path")
+  .attr("d","M1.52,62.77a.09.09,0,0,1-.08-.08c0-34.19,27.77-59.34,62-59.34s61.93,25.14,62,59.32a.09.09,0,0,1-.08.09L79,63a.09.09,0,0,0-.09.09,15.49,15.49,0,0,1-31,0,.08.08,0,0,0-.08-.08Z")
+  .attr("transform","translate(" + -0.94 + "," + -1.68 + ")")
+  .style("stroke","#868686")
+  .style("stroke-miterlimit","10")
+  .style("fill","#fff")
+
+svgBarometre.append("path")
+  .attr("class","fleche_valeur")
+
+svgBarometre.append("circle")
+  .attr("cx","62.46")
+  .attr("cy","59.77")
+  .attr("r","1.32")
+
+svgBarometre.append("line")
+  .attr("x1","113.85")
+  .attr("y1","31.36")
+  .attr("x2","115.66")
+  .attr("y2","30.3")
+
+svgBarometre.append("line")
+  .attr("x1","91.47")
+  .attr("y1","10.69")
+  .attr("x2","92.52")
+  .attr("y2","8.87")
+
+svgBarometre.append("line")
+  .attr("x1","62.47")
+  .attr("y1","3.81")
+  .attr("x2","62.47")
+  .attr("y2","1.71")
+
+svgBarometre.append("line")
+  .attr("x1","33.35")
+  .attr("y1","10.81")
+  .attr("x2","32.3")
+  .attr("y2","8.99")
+
+svgBarometre.append("line")
+  .attr("x1","11.01")
+  .attr("y1","31.43")
+  .attr("x2","9.19")
+  .attr("y2","30.38")
+
+svgBarometre.append("circle")
+  .attr("class","rond_valeur")
+
+
+svgBarometre.append("text")
+  .attr("transform","translate(" + 3.99 + "," + 59.58 + ")")
+
+
+svgBarometre.append("text")
+  .attr("transform","translate(" + 11.97 + "," + 33.47 + ") rotate("+ 30 + ")")
+
+svgBarometre.append("text")
+  .attr("transform","translate(" + 32.94 + "," + 12.94 + ") rotate("+ 60 + ")")
+
+
+svgBarometre.append("text")
+  .attr("transform","translate(" + 61.11 + "," + 5.28 + ") rotate("+ 90 + ")")
+
+
+svgBarometre.append("text")
+  .attr("transform","translate(" + 91.99 + "," + 12.96 + ") rotate("+ -60 + ")")
+  .attr("text-anchor","end")
+
+
+svgBarometre.append("text")
+  .attr("transform","translate(" + 112.75 + "," + 33.65 + ") rotate("+ -30 + ")")
+  .attr("text-anchor","end")
+
+svgBarometre.append("text")
+  .attr("transform","translate(" + 120.92 + "," + 59.49 + ")")
+  .attr("text-anchor","end")
+
+
+/*
+svgBarometre.on("mouseover",function(e){
+  let x = svgBarometre.offsetLeft + parseFloat(d3.event.target)
+  let y = svgBarometre.offsetTop + parseFloat(d3.event.target)
+  let svgcoords = [x,y]
+  console.log(svgcoords);
+})
+*/
+
+
   //Dégradé de couleur
 
   let gradient = d3.scaleLinear().range(monDegrade).domain([1,2,3,4,5]);
@@ -317,6 +408,8 @@ let afficherBarometre = ()=>{
 
   d3.select("#boutonbarometre1")
     .style("background-color",maCouleurHisto)
+
+
 
 
 

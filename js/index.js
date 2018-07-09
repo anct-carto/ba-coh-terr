@@ -175,6 +175,7 @@ function premiereVisite(){
 function baroAnimation(){
 d3.selectAll("circle")
   .transition()
+  .delay(1000)
   .duration(1000)
   .attr("cx",300)
   .attr("cy",300)
@@ -187,6 +188,7 @@ baroReunion(7000,1000)
 baroMayotte(8500,1000)
 baroOrigin(10000,1000)
 
+/* Animation des textes
 baroTexte("France métropolitaine", 1000)
 baroTexteOrigin(2000)
 baroTexte("Guadeloupe", 2500)
@@ -200,6 +202,7 @@ baroTexteOrigin(8000)
 baroTexte("Mayotte", 8500)
 baroTexteOrigin(9500)
 baroTexte("",10000)
+*/
 };
 
 

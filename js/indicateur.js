@@ -115,6 +115,15 @@ let cheminMonTexte = `data/txt/texte_${memoireIndicateur.substring(5)}.txt`;
 let cheminMaCarte = `data/csv/carte_${memoireIndicateur.substring(5)}.csv`;
 let cheminMonHistogramme = `data/csv/histo_${memoireIndicateur.substring(5)}.csv`;
 console.log(cheminMonHistogramme)
+
+/*Spécifie le chemin json des cartes*/
+let cheminMaCarteJSON = "";
+const cheminMaCarteJSONdep = "data/json/dep_WGS84_UTF8.topojson";
+const cheminMaCarteJSONepci2017 = "data/json/epci2017_WGS84_UTF8.topojson";
+const cheminMaCarteJSONepci2018 = "data/json/epci2018_WGS84_UTF8.topojson";
+const cheminMaCarteJSONze = "data/json/ze_WGS84_UTF8.topojson";
+
+
 //Permet la requete sur le mot clé de l'indicateur
 let cheminMonMotcle = "data/txt/motcle.txt"
 
@@ -355,11 +364,11 @@ let choixUnite = ["€","%","‰"];
 let titreLegende = ["Médiane du revenu disponible par unité de consommation",
 "Part des 15-24 ans, ni en emploi, ni en études, ni en formation",
 "Part des personnes de 65 ans et plus en 2014",
-"Part des demandeurs d'emploi de longue durée parmi les demandeurs d'emploi de catégories A, B et C",
+"Part des demandeurs d'emploi de longue durée parmi les demandeurs d'emploi",
 "Taux d'évolution annuel de la population due au solde migratoire apparent",
 "Part des locaux éligibles toutes technologies à un débit supérieur à 30 Mb/s",
 "Part des fonctions productives dans l'emploi",
-"Nombre de bénévoles actifs dans les associations pour 1000 habitants",
+"Nombre de bénévoles actifs dans les associations pour 100 habitants",
 "Taux de participation au premier tour de l'élection présidentielle",
 "",
 ""];
@@ -375,7 +384,7 @@ let sousTitreLegende = ["En euros, par zone d'emploi",
 
 let valeurBarometre = [];
 
-const valeurBarometre11 = ["17k","18k","19k","20k","21k","22k","23k"];
+const valeurBarometre11 = [17000,18000,19000,20000,21000,22000,23000];
 const valeurBarometre15 = [10,15,20,25,30,35,40];
 const valeurBarometre21 = [0,4,8,12,16,20,24];
 const valeurBarometre24 = [21,28,35,42,49,56,63];
@@ -428,9 +437,25 @@ const coord53 = ["117.1","31.01","114.15","26.31"]
 const coord61 = ["65.53","1.71","68.05","1.71"]
 const coord65 = ["66.15","1.71","84.6","5.41"]
 
+let discretisation = [];
+
+const discretisation11 = [12522,18000,19000,20000,21000,28660];
+const discretisation15 = [4.6,12.5,15,18,20,54];
+const discretisation21 = [2.2,15.5,18,20.5,24.5,37.4];
+const discretisation24 = [24.2,40,42,43.5,45,56.5];
+const discretisation31 = [-2.5,0,0.2,0.5,0.8,6.5];
+const discretisation44 = [12.2,27.5,32.5,36,39.5,57.2];
+const discretisation46 = [0,20,25,30,40,98.9];
+const discretisation51 = [5.6,7.5,9,10,11.5,17.2];
+const discretisation53 = [20.1,78.5,80.5,81.5,82.5,87.3];
+const discretisation61 = [1,30,35,38,45,88];
+const discretisation65 = [17.8,31.5,35,38,40,53.50];
+
+
 console.log(memoireNiv3);
 switch(memoireNiv3){
   case "0":
+    cheminMaCarteJSON = cheminMaCarteJSONze;
     titreLegende = titreLegende[0];
     sousTitreLegende = sousTitreLegende[0];
     choixUnite = choixUnite[0];
@@ -438,8 +463,10 @@ switch(memoireNiv3){
     d1 = d1_11;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre11);
     Array.prototype.push.apply(coord,coord11);
+    Array.prototype.push.apply(discretisation,discretisation11);
     break;
   case "1":
+    cheminMaCarteJSON = cheminMaCarteJSONepci2018;
     titreLegende = titreLegende[1];
     sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
@@ -447,8 +474,10 @@ switch(memoireNiv3){
     d1 = d1_15;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre15);
     Array.prototype.push.apply(coord,coord15);
+    Array.prototype.push.apply(discretisation,discretisation15);
     break;
   case "2":
+    cheminMaCarteJSON = cheminMaCarteJSONepci2018;
     titreLegende = titreLegende[2];
     sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
@@ -456,8 +485,10 @@ switch(memoireNiv3){
     d1 = d1_21;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre21);
     Array.prototype.push.apply(coord,coord21);
+    Array.prototype.push.apply(discretisation,discretisation21);
     break;
   case "3":
+    cheminMaCarteJSON = cheminMaCarteJSONdep;
     titreLegende = titreLegende[3];
     sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
@@ -465,8 +496,10 @@ switch(memoireNiv3){
     d1 = d1_24;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre24);
     Array.prototype.push.apply(coord,coord24);
+    Array.prototype.push.apply(discretisation,discretisation24);
     break;
   case "4":
+    cheminMaCarteJSON = cheminMaCarteJSONze;
     titreLegende = titreLegende[4];
     sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
@@ -474,8 +507,10 @@ switch(memoireNiv3){
     d1 = d1_31;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre31);
     Array.prototype.push.apply(coord,coord31);
+    Array.prototype.push.apply(discretisation,discretisation31);
     break;
   case "5":
+    cheminMaCarteJSON = cheminMaCarteJSONze;
     titreLegende = titreLegende[5];
     sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
@@ -483,8 +518,10 @@ switch(memoireNiv3){
     d1 = d1_44;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre44);
     Array.prototype.push.apply(coord,coord44);
+    Array.prototype.push.apply(discretisation,discretisation44);
     break;
   case "6":
+    cheminMaCarteJSON = cheminMaCarteJSONepci2017;
     titreLegende = titreLegende[6];
     sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
@@ -492,17 +529,21 @@ switch(memoireNiv3){
     d1 = d1_46;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre46);
     Array.prototype.push.apply(coord,coord46);
+    Array.prototype.push.apply(discretisation,discretisation46);
     break;
   case "7":
+    cheminMaCarteJSON = cheminMaCarteJSONdep;
     titreLegende = titreLegende[7];
-    sousTitreLegende = sousTitreLegende[4];
-    choixUnite = choixUnite[2];
+    sousTitreLegende = sousTitreLegende[3];
+    choixUnite = choixUnite[1];
     d0 = d0_51;
     d1 = d1_51;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre51);
     Array.prototype.push.apply(coord,coord51);
+    Array.prototype.push.apply(discretisation,discretisation51);
     break;
   case "8":
+    cheminMaCarteJSON = cheminMaCarteJSONze;
     titreLegende = titreLegende[8];
     sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
@@ -510,23 +551,26 @@ switch(memoireNiv3){
     d1 = d1_53;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre53);
     Array.prototype.push.apply(coord,coord53);
+    Array.prototype.push.apply(discretisation,discretisation53);
     break;
   case "9":
+    cheminMaCarteJSON = cheminMaCarteJSONepci2017;
     choixUnite = choixUnite[1];
     d0 = d0_61;
     d1 = d1_61;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre61);
     Array.prototype.push.apply(coord,coord61);
-
+    Array.prototype.push.apply(discretisation,discretisation61);
     break;
   case "10":
+    cheminMaCarteJSON = cheminMaCarteJSONze;
     choixUnite = choixUnite[1];
     d0 = d0_65;
     d1 = d1_65;
     Array.prototype.push.apply(valeurBarometre,valeurBarometre65);
     Array.prototype.push.apply(coord,coord65);
+    Array.prototype.push.apply(discretisation,discretisation65);
     break;
-
 };
 
 
@@ -534,40 +578,41 @@ switch(memoireNiv3){
 /*Couleur histogramme*/
 /*Afficher graphique barometre*/
 
-let maCouleurHisto = "#fff"
-let monDegrade = ""
-let maPaletteCouleur = ""
+let maCouleurHisto = "#fff";
+let monDegrade = "";
+let maPaletteCouleur = "";
+
 
   switch(levelTitreFacteur){
     case 0:
       maCouleurHisto = colorTheme1;
       maPaletteCouleur = color5Theme2;
-      monDegrade = degrade1
+      monDegrade = degrade1;
       break;
     case 1:
       maCouleurHisto = colorTheme2;
       maPaletteCouleur = color5Theme5;
-      monDegrade = degrade2
+      monDegrade = degrade2;
       break;
     case 2:
       maCouleurHisto = colorTheme3;
       maPaletteCouleur = color5Theme6;
-      monDegrade = degrade3
+      monDegrade = degrade3;
       break;
     case 3:
       maCouleurHisto = colorTheme4;
       maPaletteCouleur = color5Theme3;
-      monDegrade = degrade4
+      monDegrade = degrade4;
       break;
     case 4:
       maCouleurHisto = colorTheme5;
       maPaletteCouleur = color5Theme1;
-      monDegrade = degrade5
+      monDegrade = degrade5;
       break;
     case 5:
       maCouleurHisto = colorTheme6;
       maPaletteCouleur = color5Theme4;
-      monDegrade = degrade6
+      monDegrade = degrade6;
       break;
   };
 
@@ -585,7 +630,7 @@ if("IntersectionObserver" in window) {
 
 let ioHisto = new IntersectionObserver(function(entries) {
   // Si intersectionRatio est égale à 0, l'élément cible est hors de vue
-  if (entries[0].intersectionRatio <= 0) return d3.selectAll(".histogramme>*").remove();;
+  if (entries[0].intersectionRatio <= 0) return d3.selectAll(".histogramme>*").remove();
   //Sinon c'est que l'élement cible est en vue
   afficherHistogramme(cheminMonHistogramme,maCouleurHisto);
 });
@@ -596,12 +641,7 @@ ioHisto.observe(document.querySelector('.mon_histogramme'));
 }
 
 
-
-
-
-
-
-afficherBarometre()
+afficherBarometre();
 afficherCarteEvolution(cheminMaCarte);
 afficherCarte(cheminMaCarte);
 

@@ -1,17 +1,13 @@
 ﻿<strong>C’est la proportion de logements et de locaux professionnels pouvant, sous réserve d’un abonnement adéquat, bénéficier d’une connexion internet Très Haut Débit.</strong>
 Il s’agit d’un débit descendant supérieur à 30 Mb/s, grâce aux technologies filaires de type FTTLa ou FTTH. Ce débit est une valeur théorique, qui correspond au débit maximal que la ligne peut effectivement atteindre.
 
-En juin 2016, 48,4% des locaux étaient éligibles au THD ; ce chiffre était de 44,6% un an plus tôt. 
+En juin 2016, 48,4% des locaux étaient éligibles au THD ; ce chiffre était de 44,6% un an plus tôt.
 
-L’accès au Très Haut Débit a <strong>progressé dans toutes les régions</strong>. De très fortes disparités perdurent, qui tentent toutefois à se résorber du fait d’un déploiement de la fibre optique plus rapide dans les régions les moins bien dotées. 
-En Ile-de-France, près des trois quarts des locaux sont éligibles au Très Haut Débit. En Bourgogne-Franche-Comté, ce taux est plus de deux fois plus faible (34,6% des locaux en 2016) ; en Corse, région de France métropolitaine la moins bien dotée, il atteint tout juste les 25%. 
-
+L’accès au Très Haut Débit a <strong>progressé dans toutes les régions</strong>. De très fortes disparités perdurent, qui tentent toutefois à se résorber du fait d’un déploiement de la fibre optique plus rapide dans les régions les moins bien dotées.
+En Ile-de-France, près des trois quarts des locaux sont éligibles au Très Haut Débit. En Bourgogne-Franche-Comté, ce taux est plus de deux fois plus faible (34,6% des locaux en 2016) ; en Corse, région de France métropolitaine la moins bien dotée, il atteint tout juste les 25%.
 La part de locaux éligibles au THD variait dans un rapport de 1 à 3,2 entre les régions de France métropolitaine en 2015 ; il varie dans un rapport de  1 à 2,9 en 2016.
 
 Au niveau des EPCI, les écarts de couverture numérique ont également tendance à se réduire.
-Le clivage principal s’observe entre espaces peu densément peuplés ou enclavés et espaces urbains. Même les contrastes régionaux, réels, reflètent cette <strong>coupure rural/urbain</strong>, les régions les moins bien équipées étant les plus rurales. 
-Les efforts importants entrepris depuis 2003 sur le mobile et depuis 2010 sur le fixe apportent des résultats encore insuffisamment tangibles pour les usagers finaux.  
- 
-Le rapport interdécile est passé de 3,4 à 3,1 entre 2015 et 2016.
-
-xxx
+Le clivage principal s’observe entre espaces peu densément peuplés ou enclavés et espaces urbains. Même les contrastes régionaux, réels, reflètent cette <strong>coupure rural/urbain</strong>, les régions les moins bien équipées étant les plus rurales.
+Les efforts importants entrepris depuis 2003 sur le mobile et depuis 2010 sur le fixe apportent des résultats encore insuffisamment tangibles pour les usagers finaux.
+ Le rapport interdécile est passé de 3,4 à 3,1 entre 2015 et 2016.
