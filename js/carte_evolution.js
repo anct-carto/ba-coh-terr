@@ -41,8 +41,8 @@ let afficherCarteEvolution = (cheminData)=>{
       .range(maPaletteCouleur);
 
   //Chargement du json et du csv
-  promises1 = d3.json(cheminMaCarteJSON);
-  promises2 = d3.csv(cheminData);
+  let promises1 = d3.json(cheminMaCarteJSON);
+  let promises2 = d3.csv(cheminData);
 
 
   Promise.all([promises1, promises2]).then(function(fr){

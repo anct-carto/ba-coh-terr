@@ -479,7 +479,7 @@ switch(memoireNiv3){
   case "2":
     cheminMaCarteJSON = cheminMaCarteJSONepci2018;
     titreLegende = titreLegende[2];
-    sousTitreLegende = sousTitreLegende[2];
+    sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
     d0 = d0_21;
     d1 = d1_21;
