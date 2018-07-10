@@ -3,15 +3,14 @@ L’évolution de la population résulte de la combinaison de deux phénomènes 
 Le taux d’évolution du solde migratoire est ici calculé en moyenne annuelle, afin de pouvoir comparer des périodes de temps différentes (1999-2009 et 2009-2014).
 <i>Attention : les données France entière retracent le solde migratoire avec l’étranger ; elles ne sont pas directement comparables avec les données régionales qui décrivent le solde avec l’étranger mais surtout celui avec les autres régions françaises.</i>
 
-La contribution des migrations à la croissance démographique du pays a diminué entre 1999 et 2014.
+<i>"La contribution des migrations à la croissance démographique du pays a diminué entre 1999 et 2014"<i>
 
-Depuis 1999, la quasi-totalité des régions ont enregistré une <strong>baisse de leur solde migratoire</strong> ; les écarts d’attractivité entre régions restent donc stables.
-Au niveau des grands espaces, la carte fait clairement apparaître l’opposition entre le <strong>quart nord-est</strong>, peu attractif, et l’<strong>arc occidental et méridional</strong> au fort dynamisme résidentiel. Un premier enjeu de rééquilibrage se situe donc à cette échelle macro.
-L’<strong>Ile-de-France</strong> constitue un autre espace spécifique : malgré un solde migratoire global fortement négatif depuis plusieurs décennies, la région capitale continue d’attirer les étudiants et les jeunes actifs et bénéficie ainsi d’une structure par âge plus jeune que les autres régions.
-On observe toujours un écart de près de 2,3 points entre le taux d’évolution annuel du au solde migratoire apparent de la région la plus attractive (Corse) et de la moins attractive (Guadeloupe pour la période 1999-2009, Martinique pour la période 2009-2014).
+Depuis 1999, la quasi-totalité des régions ont enregistré une <strong>baisse de leur solde migratoire</strong>: les écarts d’attractivité entre régions restent stables.
+Au niveau des grands espaces régionaux, le graphique fait clairement apparaître l’opposition entre le <strong>quart nord-est</strong> peu attractif, et l’<strong>arc occidental et méridional</strong> au fort dynamisme résidentiel.
+L’<strong>Île-de-France</strong> constitue un autre espace spécifique : malgré un solde migratoire global fortement négatif depuis plusieurs décennies, la région capitale continue d’attirer les étudiants et les jeunes actifs et bénéficie ainsi d’une structure par âge plus jeune que les autres régions.
+On observe un écart de près de 2,3 points entre le solde migratoire de la région la plus attractive (Corse) et de la moins attractive (Guadeloupe pour 1999-2009 et Martinique pour 2009-2014).
 
 Au niveau des zones d’emploi, les écarts d’attractivité ont tendance à se réduire.
-L’analyse à l’échelle des zones d’emploi permet par ailleurs de caractériser plus finement les zones attractives : aux littoraux s’ajoutent les <strong>zones d’emploi frontalières</strong> du Luxembourg et de la Suisse, mais aussi certaines zones aux <strong>franges de l’Ile-de-France</strong>, où s’installent des ménages qui, par choix ou sous la contrainte des prix de l’immobilier, quittent la région capitale.
- Le rapport interdécile est passé de 1,57 à 1,30 au cours de la période.
+L’analyse à l’échelle des zones d’emploi permet de caractériser plus finement les zones attractives : aux littoraux s’ajoutent les <strong>zones d’emploi frontalières</strong> du Luxembourg et de la Suisse, mais aussi certaines zones aux <strong>franges de l’Ile-de-France</strong>, où s’installent des ménages qui, par choix ou sous la contrainte des prix de l’immobilier, quittent la région capitale.
 
 La question de l’attractivité résidentielle se pose également à l’<strong>échelle des espaces métropolitains</strong>. Du fait entre autres de prix élevés de l’immobilier, les grands pôles urbains ont des soldes migratoires négatifs, au bénéfice de leurs couronnes périurbaines. Ce mouvement d’étalement urbain de la population soulève l’enjeu de l’adéquation spatiale entre logements, emplois et transports.

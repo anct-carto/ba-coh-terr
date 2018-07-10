@@ -1,17 +1,17 @@
 ﻿<strong>C'est la part des votants parmi le nombre total d’inscrits sur les listes électorales</strong>
-Le 1er tour des élections présidentielles est le scrutin le plus mobilisateur. Il rassemble tous les électeurs autour des mêmes candidats.
+Le 1er tour des élections présidentielles est le scrutin le plus mobilisateur.
 La participation aux élections est un indicateur d’implication citoyenne et de confiance des habitants d’un territoire dans la vie du pays.
 
-La participation a baissé de près de 2 points entre les deux dernières élections présidentielles.
+<i>"La participation a baissé de près de 2 points entre les deux dernières élections présidentielles"</i>
 
-Les écarts entre régions ont fortement augmenté entre 2012 et 2017.
-A cette échelle macro, les contrastes sont historiques et probablement largement d’origine culturelle, avec en particulier une forte participation en <strong>Bretagne</strong> et dans les départements du <strong>sud du Massif central</strong>.
-En 2012, L’écart de taux de participation était de 36 points de pourcentage entre la Bretagne (84,7%) et Mayotte (48,7%). Cet écart est de 48,8 points de pourcentage en 2017, entre la Bretagne, toujours en tête (83,5%) et la Guyane (34,7%). La participation, particulièrement faible dans les DOM, y a diminué plus qu’ailleurs entre les deux scrutins.
-Les contrastes sont moins marqués entre les régions de métropole, mais ils ont également augmenté entre 2012 et 2017.
+Les écarts entre régions ont beaucoup augmenté entre les élections de 2012 et celles de 2017.
+Les contrastes régionaux sont historiques et probablement d’origine culturelle.
+La <strong>Bretagne</strong> est en tête de la participation en 2012 et en 2017 : il y a 36 points de pourcentage d’écart avec Mayotte en 2012 et avec la Guyane en 2017.
 
-A l’échelle des zones d’emploi, on n’observe pas d’augmentation des écarts de taux de participation entre 2012 et 2017.
-Le rapport interdécile est stable entre 2012 et 2017, à 1,1.
+Partout en France la participation a baissé entre 2012 et 2017. Les contrastes régionaux sont historiques et probablement d’origine culturelle. La Bretagne et le sud du Massif central ont de fortes participations.
 
-Les écarts de taux de participation entre types de territoires se sont légèrement accrus entre 2012 et 2017.
-La participation aux élections est plus forte dans les couronnes des pôles notamment les couronnes des grands pôles (82,7%), elle est la plus faible dans les pôles quel que soit leur taille.  Les communes isolées hors influence des pôles sont dans une situation proche de la moyenne nationale. Cette hiérarchie, déjà vraie en 2012, a été renforcée par les évolutions entre les deux élections. La participation n’a baissé que de 1,5 point de pourcentage dans les couronnes des grands pôles alors que, déjà faible, elle recule de près de 3 points dans les pôles moyens et les petits pôles. Les écarts entre types de territoires se sont donc accrus entre 2012 et 2017.
-A l’intérieur des grandes villes, l’abstention est particulièrement élevée dans les quartiers populaires.
+Les écarts entre types de territoires se sont accrus entre 2012 et 2017.
+La participation aux élections est plus forte dans les <strong>couronnes des pôles</strong> qu’à l’<strong>intérieur des pôles</strong> quel que soit leur taille. 
+Les communes isolées hors influence des pôles sont dans une situation proche de la moyenne nationale. 
+Cette hiérarchie, déjà vraie en 2012, a été renforcée par les évolutions entre les deux élections. La participation n’a baissé que de 1,5 point de pourcentage dans les couronnes des grands pôles alors que, déjà faible, elle recule de près de 3 points dans les pôles moyens et les petits pôles. 
+A l’intérieur des grandes villes, l’abstention est particulièrement élevée dans les quartiers populaires. 

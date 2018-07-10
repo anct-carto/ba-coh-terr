@@ -1,14 +1,15 @@
 ﻿<strong>Elle permet de mesurer le degré de vieillissement d’un territoire et son évolution.</strong>
-Cette notion doit être distinguée de celle de gérontocroissance qui mesure, en absolu, l’évolution du nombre de personnes âgées. Un espace peut en effet être vieillissant (augmentation de la part des personnes âgées) sans augmentation du nombre de personnes âgées, si les jeunes en partent.
+Cette notion doit être distinguée de celle de gérontocroissance qui mesure, en absolu, l’évolution du nombre de personnes âgées.
+Un espace peut en effet être vieillissant (augmentation de la part des personnes âgées) sans augmentation du nombre de personnes âgées, si les jeunes en partent.
 
-Le vieillissement a augmenté de 2,5 points de pourcentage en 15 ans.
+<i>"Le vieillissement a augmenté de 2,5 points de pourcentage en 15 ans"</i>
 
-En excluant la Guyane, dont la situation est très spécifique (population très jeune et qui a relativement peu vieilli au cours des dernières années), les écarts entre régions ont légèrement diminué entre 1999 et 2014, les régions les plus jeunes ayant connu un vieillissement plus rapide que les autres. C’est le cas en particulier de la Réunion, mais aussi de la région Grand-Est ou encore de l’Ile-de-France.
-Il y avait 13,2 points de pourcentage d’écart entre la région la plus « vieille » et la région la plus « jeune » en 1999, en excluant la Guyane ; et 12 points en 2014. 
+Les écarts entre régions ont légèrement diminué entre 1999 et 2014 : <strong>les régions les plus jeunes ont connu un vieillissement plus rapide</strong> que les autres. C’est le cas en particulier de la Réunion, mais aussi de la région Grand-Est ou encore de l’Ile-de-France.
+La situation de la <strong>Guyane</strong> est très spécifique : population très jeune et qui a relativement peu vieilli au cours des dernières années.
 
-Au niveau des EPCI, les écarts ont également eu tendance à se réduire entre 1999 et 2014. Les 10% des EPCI où la part des personnes âgées est la plus élevée ont vu cette part gagner 2,1 points de pourcentage, contre 2,6 points pour les 10% des EPCI où cette part est la plus faible.
-Les intercommunalités les plus âgées restent toutefois localisées le long d’un axe allant de la Haute-Marne au Massif Central.
- Le rapport interdécile est passé de 2,1 à 1,9 entre 1999 et 2014.
+Au niveau des regroupements intercommunaux, les écarts ont également eu tendance à se réduire entre 1999 et 2014.
+Les intercommunalités les plus âgées restent localisées le long d’un <strong>axe allant de la Haute-Marne au Massif Central</strong>.
 
-La réduction des écarts s’explique largement par le vieillissement accéléré de territoires auparavant relativement épargnés. Les pôles urbains ainsi que leurs couronnes périurbaines sont en effet les espaces où la progression des 65 ans et plus a été la plus forte au cours des 15 dernières années.
-Les pôles petits et moyens comptent désormais parmi les espaces les plus âgés de France, proches des espaces ruraux (communes isolées hors influence des pôles).
+La réduction des écarts s’explique largement par le vieillissement accéléré de territoires auparavant relativement épargnés.
+Les pôles urbains ainsi que leurs couronnes périurbaines sont les espaces où la progression des 65 ans et plus a été la plus forte au cours des 15 dernières années.
+Les <strong>pôles petits et moyens</strong> comptent désormais parmi les espaces les plus âgés de France, proches des espaces ruraux (communes isolées hors influence des pôles).
