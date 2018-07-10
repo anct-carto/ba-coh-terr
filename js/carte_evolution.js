@@ -339,8 +339,8 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
 
 
 
-  }).catch(reason => {
-  console.log(reason)
+  }).catch(function(err){
+    console.log(err.message);
 });
 
 
