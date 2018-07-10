@@ -44,12 +44,12 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
   let promises1 = d3.json(cheminJSON);
   let promises2 = d3.csv(cheminData);
 
+  let promises = [promises1,promises2];
 
 
+  Promise.all(promises).then(function(fr){
 
-  Promise.all([promises1, promises2]).then(function(fr){
-
-
+    console.log(fr);
 
   //Fusion du json et du csv
 
@@ -339,8 +339,9 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
 
 
 
-  }).catch(function(err){
-    console.log(err.message);
+  })
+  .catch(function(err){
+    console.log(err);
 });
 
 
