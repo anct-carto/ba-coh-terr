@@ -118,7 +118,7 @@ console.log(cheminMonHistogramme)
 
 /*Spécifie le chemin json des cartes*/
 let cheminMaCarteJSON = "";
-const cheminMaCarteJSONdep = "data/json/dep_WGS84_UTF8.topojson";
+const cheminMaCarteJSONdep = "data/json/dep_WGS84_utf8.topojson";
 const cheminMaCarteJSONepci2017 = "data/json/epci2017_wgs84_utf8.topojson";
 const cheminMaCarteJSONepci2018 = "data/json/epci2018_wgs84_utf8.topojson";
 const cheminMaCarteJSONze = "data/json/ze_wgs84_utf8.topojson";

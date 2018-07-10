@@ -45,7 +45,11 @@ let afficherCarteEvolution = (cheminData)=>{
   let promises2 = d3.csv(cheminData);
 
 
-  Promise.all([promises1, promises2]).then(function(fr){
+
+  Promise.all([
+    promises1.catch(error => {return error}),
+    promises2.catch(error => {return error}),
+  ]).then(function(fr){
 
 
 
