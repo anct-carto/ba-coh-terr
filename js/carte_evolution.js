@@ -94,7 +94,7 @@ let afficherCarteEvolution = (cheminData)=>{
       update("value1")
     ):(
       document.getElementById("boutoncarte1").style.display="flex",
-      update("value0")
+      update("value1")
     );
 
 

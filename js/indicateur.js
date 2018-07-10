@@ -370,8 +370,8 @@ let titreLegende = ["Médiane du revenu disponible par unité de consommation",
 "Part des fonctions productives dans l'emploi",
 "Nombre de bénévoles actifs dans les associations pour 100 habitants",
 "Taux de participation au premier tour de l'élection présidentielle",
-"",
-""];
+"Coefficient d'intégration fiscale moyen des EPCI",
+"Part des retraites et des prestations sociales dans le revenu disponible"];
 
 let sousTitreLegende = ["En euros, par zone d'emploi",
 "En %, par intercommunalité",
@@ -555,6 +555,8 @@ switch(memoireNiv3){
     break;
   case "9":
     cheminMaCarteJSON = cheminMaCarteJSONepci2017;
+    titreLegende = titreLegende[9];
+    sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
     d0 = d0_61;
     d1 = d1_61;
@@ -564,6 +566,8 @@ switch(memoireNiv3){
     break;
   case "10":
     cheminMaCarteJSON = cheminMaCarteJSONze;
+    titreLegende = titreLegende[10];
+    sousTitreLegende = sousTitreLegende[3];
     choixUnite = choixUnite[1];
     d0 = d0_65;
     d1 = d1_65;
