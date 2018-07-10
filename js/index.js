@@ -356,6 +356,8 @@ let enleverEffetSurvolIndicateurTexte = (level) =>{
 
 
 
+
+
 //Ajout des flèches pour les thèmes
 Array.from(selectionTexteTheme).forEach((el)=>{
   el.innerHTML = "&#10097; "+el.innerHTML;
