@@ -172,8 +172,7 @@ function premiereVisite(){
     window.sessionStorage.setItem("nouvelleSession","true");
   }
 };
-
-
+ 
 function baroAnimation(){
 d3.selectAll("circle")
   .transition()
