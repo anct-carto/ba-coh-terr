@@ -49,7 +49,7 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
 
   Promise.all(promises).then(function(fr){
 
-    console.log(fr);
+    console.log("Promise.all", fr);
 
   //Fusion du json et du csv
 
@@ -341,7 +341,7 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
 
   })
   .catch(function(err){
-    console.log(err);
+    console.log("Promise.all error", err);
 });
 
 
