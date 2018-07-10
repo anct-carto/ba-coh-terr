@@ -646,7 +646,7 @@ ioHisto.observe(document.querySelector('.mon_histogramme'));
 
 
 afficherBarometre();
-afficherCarteEvolution(cheminMaCarte);
+afficherCarteEvolution(cheminMaCarteJSON,cheminMaCarte);
 afficherCarte(cheminMaCarte);
 
 

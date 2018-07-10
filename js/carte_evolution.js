@@ -1,7 +1,7 @@
 
 let etatBoutonCarte2 = true;
 
-let afficherCarteEvolution = (cheminData)=>{
+let afficherCarteEvolution = (cheminJSON, cheminData)=>{
 
   //Si une seule année
   let uneAnnee = false;
@@ -41,7 +41,7 @@ let afficherCarteEvolution = (cheminData)=>{
       .range(maPaletteCouleur);
 
   //Chargement du json et du csv
-  let promises1 = d3.json(cheminMaCarteJSON);
+  let promises1 = d3.json(cheminJSON);
   let promises2 = d3.csv(cheminData);
 
 
@@ -339,7 +339,7 @@ let afficherCarteEvolution = (cheminData)=>{
 
 
 
-  }).catch(reason => { 
+  }).catch(reason => {
   console.log(reason)
 });
 
