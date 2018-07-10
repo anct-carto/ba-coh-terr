@@ -15,7 +15,7 @@ let selectionTexteThemeFacteur5 = document.querySelectorAll("#facteur5_niv1 .tex
 let selectionTexteThemeFacteur6 = document.querySelectorAll("#facteur6_niv1 .texte_theme");
 
 let selectionMonResume = document.getElementsByClassName("mon_resume");
-
+console.log("Heeeeeeey :)");
 
 /*
 .######......###....##.....##..######..##.....##.########.
