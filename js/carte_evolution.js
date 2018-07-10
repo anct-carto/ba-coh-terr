@@ -46,10 +46,8 @@ let afficherCarteEvolution = (cheminData)=>{
 
 
 
-  Promise.all([
-    promises1.catch(error => {return error}),
-    promises2.catch(error => {return error}),
-  ]).then(function(fr){
+
+  Promise.all([promises1, promises2]).then(function(fr){
 
 
 
@@ -341,7 +339,15 @@ let afficherCarteEvolution = (cheminData)=>{
 
 
 
-  }); //fin de Promise
+  }).catch(reason => { 
+  console.log(reason)
+});
+
+
+  ; //fin de Promise
+
+
+
 
 //Style bouton
   d3.select("#boutoncarte1")
