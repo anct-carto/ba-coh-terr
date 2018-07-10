@@ -72,7 +72,6 @@ let enleverBlocTexte = () =>{
   Array.from(selectionNiv1).forEach((el,i)=>{
     el.style.display = "none";
     selectionAccueilFacteur[i].style.fillOpacity = "0.5";
-    selectionMonResume[0].style.display="none";
   });
 };
 
@@ -94,6 +93,7 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   el.addEventListener("click", function(e){
     memoireClick = "";
     afficherBlocTexte(i);
+    selectionMonResume[0].style.display="none";
     memoireClick = e.currentTarget ;
     selectionTexteFacteur[i].style.backgroundColor = colorTheme[i];
     e.stopPropagation();
@@ -104,6 +104,7 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
 Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   el.addEventListener("mouseover", function(e){
     afficherBlocTexte(i);
+    selectionMonResume[0].style.display="none";
     animerAfficherBlocTexte(i);
     selectionTexteFacteur[i].style.backgroundColor = colorTheme[i];
 
@@ -119,7 +120,8 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
 Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   el.addEventListener("mouseout", function(e){
     enleverBlocTexte(i);
-
+    memoireClick ? selectionMonResume[0].style.display="none":
+    selectionMonResume[0].style.display="block";
     switch(memoireClick){
       case accueil_facteur1:
           afficherBlocTexte(0);
@@ -354,7 +356,16 @@ let enleverEffetSurvolIndicateurTexte = (level) =>{
 };
 
 
+//Ajout couleur pour les thèmes
+Array.from(selectionTexteTheme).forEach((el,i)=>{
 
+    return (i===0 || i===1)? afficherEffetSurvolThemeTexte(i,colorTheme1):
+           (i===2 || i===3)? afficherEffetSurvolThemeTexte(i,colorTheme2):
+           (i===4)? afficherEffetSurvolThemeTexte(i,colorTheme3):
+           (i===5 || i===6)? afficherEffetSurvolThemeTexte(i,colorTheme4):
+           (i===7 || i===8)? afficherEffetSurvolThemeTexte(i,colorTheme5):
+                              afficherEffetSurvolThemeTexte(i,colorTheme6);
+});
 
 
 
