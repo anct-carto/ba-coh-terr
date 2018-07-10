@@ -72,7 +72,6 @@ let enleverBlocTexte = () =>{
   Array.from(selectionNiv1).forEach((el,i)=>{
     el.style.display = "none";
     selectionAccueilFacteur[i].style.fillOpacity = "0.5";
-    selectionMonResume[0].style.display="none";
   });
 };
 
@@ -94,6 +93,7 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   el.addEventListener("click", function(e){
     memoireClick = "";
     afficherBlocTexte(i);
+    selectionMonResume[0].style.display="none";
     memoireClick = e.currentTarget ;
     selectionTexteFacteur[i].style.backgroundColor = colorTheme[i];
     e.stopPropagation();
@@ -104,6 +104,7 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
 Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   el.addEventListener("mouseover", function(e){
     afficherBlocTexte(i);
+    selectionMonResume[0].style.display="none";
     animerAfficherBlocTexte(i);
     selectionTexteFacteur[i].style.backgroundColor = colorTheme[i];
 
@@ -119,7 +120,8 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
 Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   el.addEventListener("mouseout", function(e){
     enleverBlocTexte(i);
-
+    memoireClick ? selectionMonResume[0].style.display="none":
+    selectionMonResume[0].style.display="block";
     switch(memoireClick){
       case accueil_facteur1:
           afficherBlocTexte(0);
@@ -170,8 +172,7 @@ function premiereVisite(){
     window.sessionStorage.setItem("nouvelleSession","true");
   }
 };
-
-
+ 
 function baroAnimation(){
 d3.selectAll("circle")
   .transition()
@@ -354,6 +355,17 @@ let enleverEffetSurvolIndicateurTexte = (level) =>{
 };
 
 
+//Ajout couleur pour les thèmes
+Array.from(selectionTexteTheme).forEach((el,i)=>{
+
+    return (i===0 || i===1)? afficherEffetSurvolThemeTexte(i,colorTheme1):
+           (i===2 || i===3)? afficherEffetSurvolThemeTexte(i,colorTheme2):
+           (i===4)? afficherEffetSurvolThemeTexte(i,colorTheme3):
+           (i===5 || i===6)? afficherEffetSurvolThemeTexte(i,colorTheme4):
+           (i===7 || i===8)? afficherEffetSurvolThemeTexte(i,colorTheme5):
+                              afficherEffetSurvolThemeTexte(i,colorTheme6);
+});
+
 
 
 //Ajout des flèches pour les thèmes
@@ -371,25 +383,6 @@ Array.from(selectionNiv3).forEach((el,i)=>{
 })
 console.log(mapIndicateur);
 
-//Evenement mouseover sur les themes
-Array.from(selectionTexteTheme).forEach((el,i)=>{
-  el.addEventListener("mouseover",function(){
-    return (i===0 || i===1)? afficherEffetSurvolThemeTexte(i,colorTheme1):
-           (i===2 || i===3)? afficherEffetSurvolThemeTexte(i,colorTheme2):
-           (i===4)? afficherEffetSurvolThemeTexte(i,colorTheme3):
-           (i===5 || i===6)? afficherEffetSurvolThemeTexte(i,colorTheme4):
-           (i===7 || i===8)? afficherEffetSurvolThemeTexte(i,colorTheme5):
-                              afficherEffetSurvolThemeTexte(i,colorTheme6);
-  });
-});
-
-
-//Evenement mouseout sur les themes
-Array.from(selectionTexteTheme).forEach((el,i)=>{
-  el.addEventListener("mouseout",function(){
-    enleverEffetSurvolThemeTexte(i);
-  });
-});
 
 //Evenement click sur mon contenu
 document.getElementsByClassName("mon_contenu")[0].addEventListener("click",function(e){
@@ -399,27 +392,16 @@ document.getElementsByClassName("mon_contenu")[0].addEventListener("click",funct
 //Evenement mouseover sur les indicateurs
 Array.from(selectionNiv3).forEach((el,i)=>{
   el.addEventListener("mouseover",function(){
-    return (i===0)? ( afficherEffetSurvolIndicateurTexte(i,colorTheme1),
-                      afficherEffetSurvolThemeTexte(0, colorTheme1)):
-           (i===1)? (afficherEffetSurvolIndicateurTexte(i,colorTheme1),
-                      afficherEffetSurvolThemeTexte(1, colorTheme1)):
-           (i===2)? (afficherEffetSurvolIndicateurTexte(i,colorTheme2),
-                      afficherEffetSurvolThemeTexte(2, colorTheme2)):
-           (i===3)? (afficherEffetSurvolIndicateurTexte(i,colorTheme2),
-                      afficherEffetSurvolThemeTexte(3, colorTheme2)):
-           (i===4)? (afficherEffetSurvolIndicateurTexte(i,colorTheme3),
-                      afficherEffetSurvolThemeTexte(4, colorTheme3)):
-           (i===5)? (afficherEffetSurvolIndicateurTexte(i,colorTheme4),
-                      afficherEffetSurvolThemeTexte(5, colorTheme4)):
-           (i===6)? (afficherEffetSurvolIndicateurTexte(i,colorTheme4),
-                      afficherEffetSurvolThemeTexte(6, colorTheme4)):
-           (i===7)? (afficherEffetSurvolIndicateurTexte(i,colorTheme5),
-                      afficherEffetSurvolThemeTexte(7, colorTheme5)):
-           (i===8)? (afficherEffetSurvolIndicateurTexte(i,colorTheme5),
-                      afficherEffetSurvolThemeTexte(8, colorTheme5)):
-                    (afficherEffetSurvolIndicateurTexte(i,colorTheme6),
-                      afficherEffetSurvolThemeTexte(9, colorTheme6),
-                      afficherEffetSurvolThemeTexte(10, colorTheme6));
+    return (i===0)? afficherEffetSurvolIndicateurTexte(i,colorTheme1):
+           (i===1)? afficherEffetSurvolIndicateurTexte(i,colorTheme1):
+           (i===2)? afficherEffetSurvolIndicateurTexte(i,colorTheme2):
+           (i===3)? afficherEffetSurvolIndicateurTexte(i,colorTheme2):
+           (i===4)? afficherEffetSurvolIndicateurTexte(i,colorTheme3):
+           (i===5)? afficherEffetSurvolIndicateurTexte(i,colorTheme4):
+           (i===6)? afficherEffetSurvolIndicateurTexte(i,colorTheme4):
+           (i===7)? afficherEffetSurvolIndicateurTexte(i,colorTheme5):
+           (i===8)? afficherEffetSurvolIndicateurTexte(i,colorTheme5):
+                    afficherEffetSurvolIndicateurTexte(i,colorTheme6);
   });
 });
 

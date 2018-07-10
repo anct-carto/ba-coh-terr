@@ -118,10 +118,10 @@ console.log(cheminMonHistogramme)
 
 /*Spécifie le chemin json des cartes*/
 let cheminMaCarteJSON = "";
-const cheminMaCarteJSONdep = "data/json/dep_WGS84_UTF8.topojson";
-const cheminMaCarteJSONepci2017 = "data/json/epci2017_WGS84_UTF8.topojson";
-const cheminMaCarteJSONepci2018 = "data/json/epci2018_WGS84_UTF8.topojson";
-const cheminMaCarteJSONze = "data/json/ze_WGS84_UTF8.topojson";
+const cheminMaCarteJSONdep = "data/json/dep_wgs84_utf8.topojson";
+const cheminMaCarteJSONepci2017 = "data/json/epci2017_wgs84_utf8.topojson";
+const cheminMaCarteJSONepci2018 = "data/json/epci2018_wgs84_utf8.topojson";
+const cheminMaCarteJSONze = "data/json/ze_wgs84_utf8.topojson";
 
 
 //Permet la requete sur le mot clé de l'indicateur
@@ -479,7 +479,7 @@ switch(memoireNiv3){
   case "2":
     cheminMaCarteJSON = cheminMaCarteJSONepci2018;
     titreLegende = titreLegende[2];
-    sousTitreLegende = sousTitreLegende[2];
+    sousTitreLegende = sousTitreLegende[1];
     choixUnite = choixUnite[1];
     d0 = d0_21;
     d1 = d1_21;
@@ -644,10 +644,10 @@ ioHisto.observe(document.querySelector('.mon_histogramme'));
   afficherHistogramme(cheminMonHistogramme,maCouleurHisto);
 }
 
-
+console.log(cheminMaCarteJSON);
 afficherBarometre();
-afficherCarteEvolution(cheminMaCarte);
-afficherCarte(cheminMaCarte);
+afficherCarteEvolution(cheminMaCarteJSON,cheminMaCarte);
+//afficherCarte(cheminMaCarte);
 
 
 /*
