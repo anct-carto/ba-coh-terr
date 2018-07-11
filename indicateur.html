@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/indicateur.css">
     <link rel="stylesheet" type="text/css" href="css/barometre.css">
     <link rel="stylesheet" type="text/css" href="css/histogramme.css">
+    <link rel="stylesheet" type="text/css" href="css/zau.css">
     <link rel="stylesheet" type="text/css" href="css/carte.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
@@ -124,9 +125,9 @@
                 <div class="mon_texte"></div>
               </div>
               <div class="mon_bloc_droit">
-                <div class="ma_carte">
+                <!--<div class="ma_carte">
                   <svg class="carte"></svg>
-                </div>
+                </div>-->
                 <div class="mon_zau">
                   <svg class="zau"></svg>
                 </div>
@@ -145,16 +146,21 @@
               </div>
               <div class="mon_bloc_droit derniere_diapo">
                 <div class="mes_logos">
-                  <div><img class="logo_cget" src="img/logo_cget.svg" alt="logo CGET" width="100%"></div>
-                  <div><img class="logo_ot" src="img/logo_ot.svg" alt="logo OT" width="80%"></div>
+                  <div>
+                    <img class="logo_cget" src="img/logo_cget.png" srcset="img/logo_cget.svg" alt="logo CGET" width="100%">
+                  </div>
+                  <div>
+                    <img class="logo_ot" src="img/logo_ot.png" srcset="img/logo_ot.svg" alt="logo OT" width="80%">
+                  </div>
                 </div>
                 <div class="paragraphe">Baromètre produit par le CGET, Direction des Stratégies Territoriales.</div>
-                <div class="paragraphe">Cet outil est un extrait du Baromètre de la Cohésion des Territoires.</div>
-                <div class="titre"><span>Sources :</span></div>
-                <div class="paragraphe"><i>Insee RP - Admin Express COG - STMT Pôle Emploi - Dares</i></div>
+                <div class="paragraphe">Cet outil est un extrait du <a href="img/barometre_cohesion_territoires.pdf" target="_blank"> Baromètre de la Cohésion des Territoires</a>.</div>
+                <div class="titre">Sources des données:</div>
+                <div class="paragraphe"><i>Admin Express COG - Insee RP - STMT Pôle Emploi - Dares</i></div>
                 <div><i>Filosofi - France Très Haut Débit - Ministère de l'Intérieur</i></div>
-                <div class="titre"><span>Développement :</span></div>
+                <div class="titre">Développement :</div>
                 <div class="paragraphe"> Bertrand Miroux, service cartographie</div>
+                <div class="paragraphe"> Juillet 2018</div>
               </div>
           </div>
         </div>
@@ -183,7 +189,7 @@
     <script type="text/javascript" src="js/histogramme.js"></script>
     <script type="text/javascript" src="js/carte.js"></script>
     <script type="text/javascript" src="js/carte_evolution.js"></script>
-    <!--<script type="text/javascript" src="js/zau.js"></script>-->
+    <script type="text/javascript" src="js/zau.js"></script>
     <script type="text/javascript" src="js/indicateur.js"></script>
 
 

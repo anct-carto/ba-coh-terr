@@ -114,7 +114,9 @@ let cheminMonTexte = `data/txt/texte_${memoireIndicateur.substring(5)}.txt`;
 /*Spécifie le chemin des cartes et de l'histogramme*/
 let cheminMaCarte = `data/csv/carte_${memoireIndicateur.substring(5)}.csv`;
 let cheminMonHistogramme = `data/csv/histo_${memoireIndicateur.substring(5)}.csv`;
-console.log(cheminMonHistogramme)
+/*Spécifie le chemin des zau*/
+let cheminMonZau = `data/csv/zau_${memoireIndicateur.substring(5)}.csv`;
+
 
 /*Spécifie le chemin json des cartes*/
 let cheminMaCarteJSON = "";
@@ -126,6 +128,9 @@ const cheminMaCarteJSONze = "data/json/ze_wgs84_utf8.topojson";
 
 //Permet la requete sur le mot clé de l'indicateur
 let cheminMonMotcle = "data/txt/motcle.txt"
+
+
+
 
 
 /*
@@ -647,6 +652,7 @@ ioHisto.observe(document.querySelector('.mon_histogramme'));
 console.log(cheminMaCarteJSON);
 afficherBarometre();
 afficherCarteEvolution(cheminMaCarteJSON,cheminMaCarte);
+afficherZau(cheminMonZau)
 //afficherCarte(cheminMaCarte);
 
 

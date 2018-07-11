@@ -242,10 +242,6 @@ svgBarometre.on("mouseover",function(e){
   d3.csv("data/csv/baro.csv").then(function(data){
     console.log(data);
 
-
-
-
-
     //Création de la div pour le popup
     let popup = d3.select("body").append("div")
       .attr("class", "mon_popup_barometre");

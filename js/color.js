@@ -48,3 +48,5 @@ const colorTheme3 = "#c18400";
 const colorTheme4 = "#739518";
 const colorTheme5 = "#008d36";
 const colorTheme6 = "#004a7b";
+
+const colorZau = ["#c91517","#f39829","#f9d333","#a21876","#c875ac","#069aa1","#8acdd2","#d3d5ea","#f2f4ee"];
