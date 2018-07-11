@@ -1,7 +1,7 @@
 ﻿<strong>C’est la proportion de logements et de locaux professionnels pouvant bénéficier d’une connexion internet Très Haut Débit, sous réserve d’un abonnement adéquat</strong>
 Il s’agit d’un débit descendant supérieur à 30 Mb/s, grâce aux technologies filaires de type FTTLa ou FTTH. Ce débit est une valeur théorique, qui correspond au débit maximal que la ligne peut effectivement atteindre.
 
-<i>"La part des locaux éligibles a augmenté de 8,2 points de pourcentage entre 2015 et 2017"</i>
+<i>« La part des locaux éligibles a augmenté de 8,2 points de pourcentage entre 2015 et 2017 »</i>
 
 L’accès au Très Haut Débit a <strong>progressé dans toutes les régions</strong>. De très fortes disparités perdurent, qui tendent à se résorber du fait d’un déploiement de la fibre optique plus rapide dans les régions les moins bien dotées.
 En <strong>Île-de-France</strong>, près des trois quarts des locaux sont éligibles au Très Haut Débit. En <strong>Bourgogne-Franche-Comté</strong>, ce taux est deux fois plus faible. En Corse, région de France métropolitaine la moins bien dotée, il atteint tout juste les 35%.

@@ -1,7 +1,7 @@
 ﻿<strong>Ce sont les demandeurs d’emploi inscrits dans les catégories A, B et C de pôle emploi depuis au moins un an.</strong>
 La géographie du chômage de longue durée n’est pas toujours calquée sur celle du chômage : elle montre avant tout les espaces dans lesquels les situations de chômage s’enracinent dans la durée et où le retour à l’emploi des demandeurs d’emploi est difficile.
 
-<i>"La part des demandeurs d’emploi de longue durée a augmenté de 3,4 points de pourcentage entre 2013 et 2017"</i>
+<i>« La part des demandeurs d’emploi de longue durée a augmenté de 3,4 points de pourcentage entre 2013 et 2017 »</i>
 
 Les contrastes entre régions se sont réduits entre 2013 et 2017 : la hausse du chômage de longue durée a été la plus forte dans les régions qui étaient le moins affectées en 2013, Corse (+14,6) et Centre-Val de Loire en particulier.
 

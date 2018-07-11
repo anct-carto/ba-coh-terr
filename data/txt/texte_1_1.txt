@@ -1,7 +1,7 @@
 ﻿<strong>Il indique le niveau de vie médian des populations d’un territoire.</strong>
 Il prend en compte les revenus d'activité (nets des cotisations sociales), les revenus du patrimoine, les transferts en provenance d'autres ménages et les prestations sociales (y compris les pensions de retraite et les indemnités de chômage), nets des impôts directs.
 
-<i>"Le niveau de vie de la population a augmenté de 1,5% entre 2012 et 2014"</i>
+<i>« Le niveau de vie de la population a augmenté de 1,5% entre 2012 et 2014 »</i>
 
 Les contrastes entre régions se sont légèrement réduits au cours de ces deux années : la réduction des écarts s’explique par une <strong>hausse plus marquée du niveau de vie dans les régions les plus pauvres</strong> en 2012 (Hauts-de-France, Corse, Normandie) que dans les plus riches (Ile-de-France et Auvergne-Rhône-Alpes).
 Au niveau macro des régions, l’enjeu est donc la <strong>poursuite de la tendance au rattrapage</strong> de celles qui sont les plus à la traîne. Cet enjeu  renvoie à la question de l’attractivité résidentielle ou encore à celle de la polarisation des activités économiques qui concourent directement à la diffusion des richesses sur le territoire national.

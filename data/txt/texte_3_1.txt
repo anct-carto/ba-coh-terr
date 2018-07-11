@@ -3,7 +3,7 @@ L’évolution de la population résulte de la combinaison de deux phénomènes 
 Le taux d’évolution du solde migratoire est ici calculé en moyenne annuelle, afin de pouvoir comparer des périodes de temps différentes (1999-2009 et 2009-2014).
 <i>Attention : les données France entière retracent le solde migratoire avec l’étranger ; elles ne sont pas directement comparables avec les données régionales qui décrivent le solde avec l’étranger mais surtout celui avec les autres régions françaises.</i>
 
-<i>"La contribution des migrations à la croissance démographique du pays a diminué entre 1999 et 2014"<i>
+<i>« La contribution des migrations à la croissance démographique du pays a diminué entre 1999 et 2014 »<i>
 
 Depuis 1999, la quasi-totalité des régions ont enregistré une <strong>baisse de leur solde migratoire</strong>: les écarts d’attractivité entre régions restent stables.
 Au niveau des grands espaces régionaux, le graphique fait clairement apparaître l’opposition entre le <strong>quart nord-est</strong> peu attractif, et l’<strong>arc occidental et méridional</strong> au fort dynamisme résidentiel.
