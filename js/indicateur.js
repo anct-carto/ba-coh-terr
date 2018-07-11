@@ -677,9 +677,9 @@ selectionMonChoix[0].appendChild(fragment);
 //Ajout du texte des div choix
 let selectionChoix = document.getElementsByClassName("choix");
 
-selectionChoix[0].innerHTML = " Choisir un autre indicateur du même enjeu";
+selectionChoix[0].innerHTML = " Choisir un autre indicateur du même facteur de cohésion";
 selectionChoix[1].innerHTML = " Choisir un indicateur au hasard";
-selectionChoix[2].innerHTML = " Retourner sur le baromètre interactif";
+selectionChoix[2].innerHTML = " Retourner à l'accueil";
 
 //Ajout des liens
 

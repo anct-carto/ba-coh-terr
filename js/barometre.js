@@ -381,6 +381,13 @@ svgBarometre.on("mouseover",function(e){
       d3.select("#boutonbarometre0")
       .on("click",function(d){
 
+        //Style bouton
+        d3.select("#boutonbarometre0")
+          .style("padding","0.5em 1.3em 1.3em 1.3em")
+        d3.select("#boutonbarometre1")
+          .style("padding","0.3em 0.3em 0.3em 0.3em")
+
+
         svgBarometre.select(".fleche_valeur")
           .transition()
             .duration(1000)
@@ -401,6 +408,14 @@ svgBarometre.on("mouseover",function(e){
       //Bonton1 - événement clic
       d3.select("#boutonbarometre1")
       .on("click",function(d){
+
+        //Style bouton
+        d3.select("#boutonbarometre1")
+          .style("padding","0.5em 1.3em 1.3em 1.3em")
+        d3.select("#boutonbarometre0")
+          .style("padding","0.2em 0.3em 0.3em 0.3em")
+
+
 
         svgBarometre.select(".fleche_valeur")
           .transition()
@@ -445,14 +460,12 @@ svgBarometre.on("mouseover",function(e){
 
 
 
-
   }); //d3 data
 
 
   d3.select("#boutonbarometre1")
     .style("background-color",maCouleurHisto)
-
-
+    .style("padding","0.5em 1.3em 1.3em 1.3em")
 
 
 

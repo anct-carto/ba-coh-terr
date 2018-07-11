@@ -196,6 +196,13 @@ let afficherHistogramme = (cheminData, couleurHisto) =>{
       //Bouton tri selon year0
       d3.select("#bouton0")
       .on("click",function(d){
+
+        //Style bouton
+        d3.select("#bouton0")
+          .style("padding","0.5em 1.3em 1.3em 1.3em")
+        d3.select("#bouton1")
+          .style("padding","0.2em 0.3em 0.3em 0.3em")
+
           data.sort(function(a,b){
               return d3.descending(a.value0,b.value0);
             })
@@ -220,6 +227,14 @@ let afficherHistogramme = (cheminData, couleurHisto) =>{
           //Bouton tri selon year1
           d3.select("#bouton1")
           .on("click",function(d){
+
+            //Style bouton
+            d3.select("#bouton1")
+              .style("padding","0.5em 1.3em 1.3em 1.3em")
+            d3.select("#bouton0")
+              .style("padding","0.2em 0.3em 0.3em 0.3em")
+
+
               data.sort(function(a,b){
                   return d3.descending(a.value1,b.value1);
                 })
@@ -292,9 +307,14 @@ let afficherHistogramme = (cheminData, couleurHisto) =>{
 
   }); //d3 data
 
+//Style bouton0
+d3.select("#bouton0")
+  .style("padding","0.2em 0.3em 0.3em 0.3em")
+
 //Style bouton1
 d3.select("#bouton1")
     .style("background-color", couleurHisto)
+    .style("padding","0.2em 0.3em 0.3em 0.3em")
 
 
 }; //fonction afficherHistogramme

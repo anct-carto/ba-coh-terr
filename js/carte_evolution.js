@@ -207,7 +207,7 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
          else {
            highlighted = d;
 
-           features.style("opacity",0.2)
+           features.style("opacity",0.1)
             .filter(function(f) {
              return color(f.properties[dataValue]) == d;
             })
@@ -277,6 +277,13 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
 
 
             function evolution (){
+
+              //style bouton
+              d3.select("#boutoncarte0")
+                .style("padding","0.2em 0.3em 0.3em 0.3em")
+              d3.select("#boutoncarte1")
+                .style("padding","0.2em 0.3em 0.3em 0.3em")
+
             features
             .style("fill", function(d){
               var value = d.properties["value0"];
@@ -309,11 +316,23 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
     d3.select("#boutoncarte0")
     .on("click",function(d){
 
+      //Style bouton
+      d3.select("#boutoncarte0")
+        .style("padding","0.5em 1.3em 1.3em 1.3em")
+      d3.select("#boutoncarte1")
+        .style("padding","0.2em 0.3em 0.3em 0.3em")
+
       update("value0");
     });
 
     d3.select("#boutoncarte1")
     .on("click",function(d){
+
+      //Style bouton
+      d3.select("#boutoncarte1")
+        .style("padding","0.5em 1.3em 1.3em 1.3em")
+      d3.select("#boutoncarte0")
+        .style("padding","0.2em 0.3em 0.3em 0.3em")
 
       update("value1");
     });
