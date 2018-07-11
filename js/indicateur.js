@@ -363,7 +363,7 @@ let choixUnite = ["€","%","‰"];
 
 let titreLegende = ["Médiane du revenu disponible par unité de consommation",
 "Part des 15-24 ans, ni en emploi, ni en études, ni en formation",
-"Part des personnes de 65 ans et plus",
+"Part des personnes de 65 ans et plus en 2014",
 "Part des demandeurs d'emploi de longue durée parmi les demandeurs d'emploi",
 "Taux d'évolution annuel de la population due au solde migratoire apparent",
 "Part des locaux éligibles toutes technologies à un débit supérieur à 30 Mb/s",
