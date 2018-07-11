@@ -374,10 +374,7 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
   })
   .catch(function(err){
     console.log("Promise.all error", err);
-});
-
-
-  ; //fin de Promise
+});//fin de Promise
 
 
 
@@ -385,8 +382,10 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
 //Style bouton
   d3.select("#boutoncarte1")
       .style("background-color", maPaletteCouleur[4])
+      .style("padding","0.5em 1.3em 1.3em 1.3em")
 
   d3.select("#boutoncarte2")
       .style("background-color", maPaletteCouleur[4])
+
 
 }; //fin de la fonction afficherCarteEvolution

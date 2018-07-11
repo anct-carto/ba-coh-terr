@@ -180,6 +180,46 @@
   }
 
 
+  /*Page crédits, sources*/
+  .mes_logos{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+
+  .logo_cget{
+    display:flex;
+  }
+
+  .logo_ot{
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .derniere_diapo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:1.1em;
+    font-family: latomedium;
+    color:#595959;
+    text-align: center;
+  }
+
+  .paragraphe{
+    padding: 0.2em 0.25em 0.3em 0.3em;
+  }
+
+  .titre{
+    font-family: latobold;
+    font-size: 1em;
+    padding: 1em 0.25em 0.5em 0.3em;
+  }
+
 }
 
 
@@ -281,5 +321,11 @@
   .precedente_diapo, .suivante_diapo {
     display: none;
   }
+
+  /*Crédits*/
+  .mes_logos{
+    margin-top: 10%;
+  }
+
 
 }
