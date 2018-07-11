@@ -3,7 +3,9 @@ let selectionNiv1 = document.getElementsByClassName("niv1");
 let selectionTexteFacteur = document.getElementsByClassName("texte_facteur");
 let selectionTexteTheme = document.getElementsByClassName("texte_theme");
 let selectionNiv3 = document.getElementsByClassName("niv3");
-let selectionAccueilCercle = document.getElementsByClassName("accueil_cercle")
+let selectionAccueilCercle = document.getElementsByClassName("accueil_cercle");
+let selectionOmbre = document.getElementsByClassName("ombre");
+
 
 let selectionTexteThemeFacteur1 = document.querySelectorAll("#facteur1_niv1 .texte_theme");
 let selectionTexteThemeFacteur2 = document.querySelectorAll("#facteur2_niv1 .texte_theme");
@@ -13,7 +15,7 @@ let selectionTexteThemeFacteur5 = document.querySelectorAll("#facteur5_niv1 .tex
 let selectionTexteThemeFacteur6 = document.querySelectorAll("#facteur6_niv1 .texte_theme");
 
 let selectionMonResume = document.getElementsByClassName("mon_resume");
-
+console.log("Heeeeeeey :)");
 
 /*
 .######......###....##.....##..######..##.....##.########.
@@ -30,12 +32,12 @@ let revelationAnimation = {
   opacity:[0,1]
 }
 
-
 let nonRevelationAnimation = {
   opacity:[1,0]
 }
 
 //Fonctions barometre svg
+
 
 let memoireClick = "" ;
 
@@ -43,35 +45,46 @@ let afficherBlocTexte = (level) =>{
   enleverBlocTexte();
   selectionNiv1[level].style.display = "block";
   selectionAccueilFacteur[level].style.fillOpacity = "1";
-
+  selectionOmbre[level].style.opacity = "1";
   switch(memoireClick){
     case accueil_facteur1:
         selectionAccueilFacteur[0].style.fillOpacity = "1";
+        selectionOmbre[0].style.opacity = "1";
       break;
     case accueil_facteur2:
         selectionAccueilFacteur[1].style.fillOpacity = "1";
+        selectionOmbre[1].style.opacity = "1";
       break;
     case accueil_facteur3:
         selectionAccueilFacteur[2].style.fillOpacity = "1";
+        selectionOmbre[2].style.opacity = "1";
       break;
     case accueil_facteur4:
         selectionAccueilFacteur[3].style.fillOpacity = "1";
+        selectionOmbre[3].style.opacity = "1";
       break;
     case accueil_facteur5:
         selectionAccueilFacteur[4].style.fillOpacity = "1";
+        selectionOmbre[4].style.opacity = "1";
       break;
     case accueil_facteur6:
         selectionAccueilFacteur[5].style.fillOpacity = "1";
+        selectionOmbre[5].style.opacity = "1";
       break;
   };
 
 };
 
 
+
 let enleverBlocTexte = () =>{
   Array.from(selectionNiv1).forEach((el,i)=>{
     el.style.display = "none";
     selectionAccueilFacteur[i].style.fillOpacity = "0.5";
+    selectionOmbre[i].style.opacity = "0.5";
+    Array.from(selectionAccueilCercle).forEach((el,i)=>{
+      el.style.opacity = "0.5";
+    });
   });
 };
 
@@ -81,6 +94,46 @@ let animerAfficherBlocTexte = (level) =>{
   selectionNiv1[level].animate(revelationAnimation,399);
   selectionNiv1[level].style.opacity = "1";
 };
+
+
+//Paramétrage des dégradés arc de cercle
+let presserArcDeCercle = (level) =>{
+  nonPresserArcDeCercle();
+  switch(level){
+    case 0:
+        selectionAccueilFacteur[0].style.fill = "url(#degrade1_on)";
+      break;
+    case 1:
+        selectionAccueilFacteur[1].style.fill = "url(#degrade2_on)";
+      break;
+    case 2:
+        selectionAccueilFacteur[2].style.fill = "url(#degrade3_on)";
+      break;
+    case 3:
+        selectionAccueilFacteur[3].style.fill = "url(#degrade4_on)";
+      break;
+    case 4:
+        selectionAccueilFacteur[4].style.fill = "url(#degrade5_on)";
+      break;
+    case 5:
+        selectionAccueilFacteur[5].style.fill = "url(#degrade6_on)";
+      break
+  };
+}
+
+let nonPresserArcDeCercle = () =>{
+  selectionAccueilFacteur[0].style.fill = "url(#degrade1_off)";
+  selectionAccueilFacteur[1].style.fill = "url(#degrade2_off)";
+  selectionAccueilFacteur[2].style.fill = "url(#degrade3_off)";
+  selectionAccueilFacteur[3].style.fill = "url(#degrade4_off)";
+  selectionAccueilFacteur[4].style.fill = "url(#degrade5_off)";
+  selectionAccueilFacteur[5].style.fill = "url(#degrade6_off)";
+}
+
+
+
+
+
 
 
 //Action sur le svg barometre
@@ -93,6 +146,7 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   el.addEventListener("click", function(e){
     memoireClick = "";
     afficherBlocTexte(i);
+    presserArcDeCercle(i);
     selectionMonResume[0].style.display="none";
     memoireClick = e.currentTarget ;
     selectionTexteFacteur[i].style.backgroundColor = colorTheme[i];
@@ -108,9 +162,7 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
     animerAfficherBlocTexte(i);
     selectionTexteFacteur[i].style.backgroundColor = colorTheme[i];
 
-    Array.from(selectionAccueilCercle).forEach((el,i)=>{
-      el.style.opacity = "0.5";
-    });
+
 
   });
 });
@@ -145,6 +197,12 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   });
 });
 
+
+//Animation sur le svg barometre
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+
+
 //Texte paramétrage
 
 d3.selectAll(".barometre")
@@ -157,7 +215,6 @@ d3.selectAll(".barometre")
   .style("text-anchor","middle")
   .style("opacity",0)
   .text("")
-
 
   //Animation
 
@@ -172,12 +229,8 @@ function premiereVisite(){
     window.sessionStorage.setItem("nouvelleSession","true");
   }
 };
-<<<<<<< HEAD
 
 
-=======
- 
->>>>>>> a5134a4fc15361ca74cf147d5173aeab2c94baaa
 function baroAnimation(){
 d3.selectAll("circle")
   .transition()
@@ -452,8 +505,11 @@ for (let i=0;i<selectionNiv3.length;i++){
 
 document.addEventListener("click",function(){
   enleverBlocTexte();
+  nonPresserArcDeCercle();
+  memoireClick = ""
 Array.from(selectionNiv1).forEach((el,i)=>{
     selectionAccueilFacteur[i].style.fillOpacity = "1";
+    selectionOmbre[i].style.opacity = "1";
 
     Array.from(selectionAccueilCercle).forEach((el,i)=>{
       el.style.opacity = "1";
@@ -461,7 +517,7 @@ Array.from(selectionNiv1).forEach((el,i)=>{
 
     document.getElementsByClassName("mon_accueil_droit")[0].style.display="flex";
     selectionMonResume[0].style.display="block";
-    memoireClick = ""
+
   });
 });
 
