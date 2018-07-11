@@ -1,5 +1,5 @@
 
-let etatBoutonCarte2 = true;
+let etatBoutonCarte2 = false;
 
 let afficherCarteEvolution = (cheminJSON, cheminData)=>{
 
@@ -10,6 +10,18 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
   w = 600;
   h = 550;
   view = [0,0,600,550];
+
+
+  //Format fr
+  let fr_FR = {
+    "decimal":",",
+    "thousands": "\u2009",
+    "grouping":[3]
+  }
+
+  d3.formatDefaultLocale(fr_FR);
+
+  var format = d3.format(",");
 
 
   //Sélection de l'élément html
@@ -152,7 +164,7 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
                .style("top", d3.event.pageY - 60 + "px")
                .style("display", "inline-block")
                .style("text-align", "left")
-               .html(`<div>${d.properties.libgeo}</div><div><span>${d.properties[dataValue]} ${choixUnite}</span></div>`);
+               .html(`<div>${d.properties.libgeo}</div><div><span>${format(d.properties[dataValue])} ${choixUnite}</span></div>`);
               d3.select(this).style("cursor","crosshair");
 
          })
@@ -242,7 +254,8 @@ let afficherCarteEvolution = (cheminJSON, cheminData)=>{
           .text(function(d,i) {
               var extent = color.invertExtent(d);
               //extent will be a two-element array, format it however you want:
-              var format = d3.format("");
+
+
               return `${format(+extent[0])} - ${format(+extent[1])}`
             });
 

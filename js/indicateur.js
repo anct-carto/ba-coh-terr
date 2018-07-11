@@ -384,17 +384,17 @@ let sousTitreLegende = ["En euros, par zone d'emploi",
 
 let valeurBarometre = [];
 
-const valeurBarometre11 = [17000,18000,19000,20000,21000,22000,23000];
-const valeurBarometre15 = [10,15,20,25,30,35,40];
-const valeurBarometre21 = [0,4,8,12,16,20,24];
-const valeurBarometre24 = [21,28,35,42,49,56,63];
-const valeurBarometre31 = [-1.2,-.7,-.2,.3,.8,.3,1.8];
-const valeurBarometre44 = [12,17,22,27,32,37,42];
-const valeurBarometre46 = [7,20,33,46,59,72,85];
-const valeurBarometre51 = [2,4,6,8,10,12,14];
-const valeurBarometre53 = [30,40,50,60,70,80,90];
-const valeurBarometre61 = [20,25,30,35,40,45,50];
-const valeurBarometre65 = [22,25,28,31,34,37,40];
+const valeurBarometre11 = ["17\u2009000","18\u2009000","19\u2009000","20\u2009000","21\u2009000","22\u2009000","23\u2009000"];
+const valeurBarometre15 = ["10","15","20","25","30","35","40"];
+const valeurBarometre21 = ["0","4","8","12","16","20","24"];
+const valeurBarometre24 = ["21","28","35","42","49","56","63"];
+const valeurBarometre31 = ["-1,2","-0,7","-0,2","0,3","0,8","1,3","1,8"];
+const valeurBarometre44 = ["12","17","22","27","32","37","42"];
+const valeurBarometre46 = ["7","20","33","46","59","72","85"];
+const valeurBarometre51 = ["2","4","6","8","10","12","14"];
+const valeurBarometre53 = ["30","40","50","60","70","80","90"];
+const valeurBarometre61 = ["20","25","30","35","40","45","50"];
+const valeurBarometre65 = ["22","25","28","31","34","37","40"];
 
 
 let d0 = ""

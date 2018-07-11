@@ -173,6 +173,12 @@
   }
 
 
+  /*Image retour accueil*/
+  .mon_en_tete_gauche{
+    display: flex;
+    justify-content: center;
+  }
+
 
 }
 

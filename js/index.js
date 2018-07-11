@@ -225,10 +225,11 @@ function premiereVisite(){
   if (window.sessionStorage.getItem("nouvelleSession")){
     console.log("ce n'est pas la première visite");
   } else {
-    baroAnimation();
+    //baroAnimation();
     window.sessionStorage.setItem("nouvelleSession","true");
   }
 };
+
 
 function baroAnimation(){
 d3.selectAll("circle")

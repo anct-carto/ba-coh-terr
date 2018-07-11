@@ -11,6 +11,18 @@ let afficherHistogramme = (cheminData, couleurHisto) =>{
   let height =  550 - margin.top - margin.bottom;
 
 
+  //Format fr
+  let fr_FR = {
+    "decimal":",",
+    "thousands": "\u2009",
+    "grouping":[3]
+  }
+
+  d3.formatDefaultLocale(fr_FR);
+
+  var format = d3.format(",");
+
+
   //Sélection de l'élément html
   let svgHisto = d3.select(".histogramme")
       .attr("width","100%")
@@ -144,11 +156,11 @@ let afficherHistogramme = (cheminData, couleurHisto) =>{
             uneAnnee ?
             popup
               .html(`<div>${(d.libreg)}</div>
-                     <div><span> ${(d.year1)} </span> : ${(d.value1)} ${choixUnite}</div>`):
+                     <div><span> ${(d.year1)} </span> : ${format(d.value1)} ${choixUnite}</div>`):
             popup
               .html(`<div>${(d.libreg)}</div>
-                     <div><span> ${(d.year0)} </span> : ${(d.value0)} ${choixUnite} </div>
-                     <div><span> ${(d.year1)} </span> : ${(d.value1)} ${choixUnite}</div>`)
+                     <div><span> ${(d.year0)} </span> : ${format(d.value0)} ${choixUnite} </div>
+                     <div><span> ${(d.year1)} </span> : ${format(d.value1)} ${choixUnite}</div>`)
 
 
      //Couleur div texte popup

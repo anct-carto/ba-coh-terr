@@ -176,6 +176,17 @@ svgBarometre.on("mouseover",function(e){
     .text(function(d,i){return valeurBarometre[i];})
 
 
+    //Format fr
+    let fr_FR = {
+      "decimal":",",
+      "thousands": "\u2009",
+      "grouping":[3]
+    }
+
+    d3.formatDefaultLocale(fr_FR);
+
+    var format = d3.format(",");
+
 
   //Animation path
 
@@ -197,6 +208,7 @@ svgBarometre.on("mouseover",function(e){
       .attr("cy","59.77")
       .attr("r","1.71")
       .style("fill",maCouleurHisto)
+      .style("cursor","crosshair")
 
 
   function pathTween(d1, precision) {
@@ -310,11 +322,11 @@ svgBarometre.on("mouseover",function(e){
         uneAnnee ?
         popup
           .data(data)
-          .html(function(d){return `<div><span> ${(d.year1)} </span> : ${(d.value1)} ${choixUnite}</div>`}):
+          .html(function(d){return `<div><span> ${(d.year1)} </span> : ${format(d.value1)} ${choixUnite}</div>`}):
         popup
           .data(data)
-          .html(function(d){return `<div><span> ${(d.year0)} </span> : ${(d.value0)} ${choixUnite}</div>
-                                  <div><span> ${(d.year1)} </span> : ${(d.value1)} ${choixUnite}</div>`})
+          .html(function(d){return `<div><span> ${(d.year0)} </span> : ${format(d.value0)} ${choixUnite}</div>
+                                  <div><span> ${(d.year1)} </span> : ${format(d.value1)} ${choixUnite}</div>`})
 
         d3.select(".mon_popup_barometre>div:last-child")
           .style("color",maCouleurHisto)
@@ -323,6 +335,37 @@ svgBarometre.on("mouseover",function(e){
       .on("mouseout", function(d){
         popup.style("display", "none");
       });
+
+
+      //Ajout du popup sur cercle - "événément souris"
+      //Ajout du popup sur fleche - événement souris
+      svgBarometre.select(".rond_valeur")
+        .on("mousemove",function(d){
+
+          popup
+            .style("left", d3.event.pageX - 50 + "px")
+            .style("top", d3.event.pageY - 80 + "px")
+            .style("display", "inline-block")
+            .style("text-align", "left")
+
+
+          //Condition si une seule année
+          uneAnnee ?
+          popup
+            .data(data)
+            .html(function(d){return `<div><span> ${(d.year1)} </span> : ${format(d.value1)} ${choixUnite}</div>`}):
+          popup
+            .data(data)
+            .html(function(d){return `<div><span> ${(d.year0)} </span> : ${format(d.value0)} ${choixUnite}</div>
+                                    <div><span> ${(d.year1)} </span> : ${format(d.value1)} ${choixUnite}</div>`})
+
+          d3.select(".mon_popup_barometre>div:last-child")
+            .style("color",maCouleurHisto)
+
+        })
+        .on("mouseout", function(d){
+          popup.style("display", "none");
+        });
 
 
       //Bouton Ajout année
