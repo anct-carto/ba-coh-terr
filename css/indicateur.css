@@ -192,11 +192,10 @@
     display:flex;
   }
 
-  .logo_ot{
+  .logo_ot, .logo_cget{
     display:flex;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
   }
 
   .derniere_diapo{
@@ -330,8 +329,10 @@
   /*Crédits*/
   .mes_logos{
     flex-direction: column;
-    margin-top: 10%;
   }
 
+  .logo_cget{
+    margin-top: 10%;
+  }
 
 }
