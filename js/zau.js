@@ -4,14 +4,14 @@ let afficherZau = (cheminData) =>{
 let margin = {top: 200, right: 20, bottom: 100, left: 20}
 //Création des dimensions internes du graphique
 let width =  600 - margin.left - margin.right
-let height =  650 - margin.top - margin.bottom;
+let height =  550 - margin.top - margin.bottom;
 
 
 //Sélection de l'élément html
 let svgZau = d3.select(".zau")
     .attr("width","100%")
     .attr("preserveAspectRatio","xMidYMid meet")
-    .attr("viewBox","0 0 600 650");
+    .attr("viewBox","0 0 600 550");
 
 //Création de l'élément g crée dans l'élément svg, centre les éléments
 let g1 = svgZau.append("g")
@@ -123,7 +123,7 @@ y.domain(d3.extent([ymin,ymax])).nice()
            .attr("x", function(d) { return x(d.codzau) + 10; })
            .attr("width", x.bandwidth() - 20)
            .attr("y", function (d) {
-             if (d.value1 >0){
+             if (d.value0 >0){
              return y(d.value0);
            } else {
              return y(0);
@@ -157,57 +157,135 @@ y.domain(d3.extent([ymin,ymax])).nice()
           .append("rect")
           .attr("x", 30)
           .attr("y", function(d, i) {
-             return 0 + i * 20;
-          })
-         .attr("width", 20)
-         .attr("height", 10)
-         .style("stroke", "black")
-         .style("stroke-width", 0.1)
-         .style("fill", function(d){return d;});
-
-
-         /*Légende zau*/
-         const valeurZau = ["111 : Grand pôles", "112 : Couronnes de grands pôles", "120 : Communes multipolarisées des grandes aires urbaines",
-         "211 : Pôles moyens", "212 : Couronnes des pôles moyens","221 : Petits pôles","222 : Couronnes des petits pôles",
-         "300 : Autres communes multipolarisées", "400 : Communes isolées, hors influence des pôles"];
-
-         svgZau.selectAll("g.legend_zau")
-          .exit()
-          .data(valeurZau)
-          .enter()
-           .append('text')
-           .attr("x", 55) //leave 5 pixel space after the <rect>
-           .attr("y", function(d, i) {
               return 0 + i * 20;
            })
-           .attr("dy", "0.8em") //place text one line *below* the x,y point
-           .style("font-family","latomedium")
-           .style("font-size","0.8em")
-           .text(function(d){ return d})
+           .attr("width", 20)
+           .attr("height", 10)
+           .style("stroke", "black")
+           .style("stroke-width", 0.1)
+           .style("fill", function(d){return d;});
 
 
-          //Ajout du popup
-          g1.selectAll(".bar")
-          .on("mousemove", function(d){
+       /*Légende zau*/
+       const valeurZau = ["111 : Grands pôles", "112 : Couronnes de grands pôles", "120 : Communes multipolarisées des grandes aires urbaines",
+       "211 : Pôles moyens", "212 : Couronnes des pôles moyens","221 : Petits pôles","222 : Couronnes des petits pôles",
+       "300 : Autres communes multipolarisées", "400 : Communes isolées, hors influence des pôles"];
 
-                popup
-                  .style("left", d3.event.pageX - 50 + "px")
-                  .style("top", d3.event.pageY - 80 + "px")
-                  .style("display", "inline-block")
-                  .style("text-align", "left")
-                  d3.select(this).style("cursor","crosshair");
+       svgZau.selectAll("g.legend_zau")
+        .exit()
+        .data(valeurZau)
+        .enter()
+        .append('text')
+        .attr("x", 55) //leave 5 pixel space after the <rect>
+        .attr("y", function(d, i) {
+          return 0 + i * 20;
+        })
+        .attr("dy", "0.8em") //place text one line *below* the x,y point
+        .style("font-family","latomedium")
+        .style("font-size","0.8em")
+        .text(function(d){ return d})
 
+
+        //Ajout du popup
+        g1.selectAll(".bar")
+        .on("mousemove", function(d){
 
               popup
-                .html(`<div>${(d.libzau)}</div>
-                       <div><span> ${(d.year0)} </span> : ${format(d.value0)} ${choixUnite} </div>
-                       <div><span> ${(d.year1)} </span> : ${format(d.value1)} ${choixUnite}</div>`)
-})
-.on("mouseout", function(d){
-   popup
-     .style("display", "none");
-   d3.select(this).style("cursor","none");
-   });
+                .style("left", d3.event.pageX - 50 + "px")
+                .style("top", d3.event.pageY - 80 + "px")
+                .style("display", "inline-block")
+                .style("text-align", "left")
+                d3.select(this).style("cursor","crosshair");
+
+
+            popup
+              .html(`<div>${(d.libzau)}</div>
+                     <div><span> ${(d.year0)} </span> : ${format(d.value0)} ${choixUnite} </div>
+                     <div><span> ${(d.year1)} </span> : ${format(d.value1)} ${choixUnite}</div>`)
+        })
+        .on("mouseout", function(d){
+           popup
+             .style("display", "none");
+           d3.select(this).style("cursor","none");
+           });
+
+
+         //Bouton Ajout année
+         d3.select("#boutonzau0>span")
+             .data(data)
+             .html(function(d){return d.year0})
+         d3.select("#boutonzau1>span")
+             .data(data)
+             .html(function(d){return d.year1})
+
+
+         //Bouton tri selon year0
+         d3.select("#boutonzau0")
+         .on("click",function(d){
+
+           //Style bouton
+           d3.select("#boutonzau0")
+             .style("padding","0.5em 1.3em 1.3em 1.3em")
+           d3.select("#boutonzau1")
+             .style("padding","0.2em 0.3em 0.3em 0.3em")
+
+             data.sort(function(a,b){
+                 return d3.descending(a.value0,b.value0);
+               })
+               x.domain(data.map(function(d){
+                 return d.codzau;
+               }));
+                 g1.selectAll(".bar0zau")
+                 .transition()
+                 .duration(500)
+                 .attr("x",function(d,i){ return x(d.codzau)+10; })
+                 g1.select(".x_axis")
+                 .transition()
+                 .duration(500)
+                 .call(d3.axisBottom(x))
+                 g1.selectAll(".bar1zau")
+                 .transition()
+                 .duration(500)
+                 .attr("x",function(d,i){ return x(d.codzau); })
+             });
+
+
+           //Bouton tri selon year1
+           d3.select("#boutonzau1")
+           .on("click",function(d){
+
+             //Style bouton
+             d3.select("#boutonzau1")
+               .style("padding","0.5em 1.3em 1.3em 1.3em")
+             d3.select("#boutonzau0")
+               .style("padding","0.2em 0.3em 0.3em 0.3em")
+
+
+               data.sort(function(a,b){
+                   return d3.descending(a.value1,b.value1);
+                 })
+                 x.domain(data.map(function(d){
+                   return d.codzau;
+                 }));
+                   g1.selectAll(".bar0zau")
+                   .transition()
+                   .duration(500)
+                   .attr("x",function(d,i){ return x(d.codzau)+10; })
+                   g1.select(".x_axis")
+                   .transition()
+                   .duration(500)
+                   .call(d3.axisBottom(x))
+                   g1.selectAll(".bar1zau")
+                   .transition()
+                   .duration(500)
+                   .attr("x",function(d,i){ return x(d.codzau); })
+               });
+
+
+
+             //Style bouton1
+             d3.select("#boutonzau1")
+                 .style("background-color", maCouleurHisto)
 
 /*
          //Ajout de l'animation barre0

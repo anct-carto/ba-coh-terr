@@ -12,11 +12,14 @@
 
 @media all{
 
+
   .zau{
     display: block;
     margin:auto;
   }
 
+
+  /*popup*/
 
   .mon_popup_zau {
       position: absolute;
@@ -60,7 +63,38 @@
 
 
 
+  /*Bouton tri zau */
 
+  #mon_bouton_zau{
+    display: flex;
+    height: 25px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 20%;
+  }
+
+  .bouton{
+    text-decoration: none;
+    text-align: center;
+    height: 25px;
+    font-family: latomedium;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    box-shadow: 2.5px 3px 5px #343534;
+    cursor: pointer;
+  }
+
+  #boutonzau0{
+    background-color: #666666;
+    margin-right: 1%;
+  }
+
+  #boutonzau1{
+    margin-left:1%;
+  }
 
 
 
