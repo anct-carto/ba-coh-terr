@@ -371,8 +371,8 @@ let titreLegende = ["Médiane du revenu disponible par unité de consommation",
 "Part des personnes de 65 ans et plus",
 "Part des demandeurs d'emploi de longue durée parmi les demandeurs d'emploi",
 "Taux d'évolution annuel de la population due au solde migratoire apparent",
-"Part des locaux éligibles toutes technologies à un débit supérieur à 30 Mb/s",
 "Part des fonctions productives dans l'emploi",
+"Part des locaux éligibles toutes technologies à un débit supérieur à 30 Mb/s",
 "Nombre de bénévoles actifs dans les associations pour 100 habitants",
 "Taux de participation au premier tour de l'élection présidentielle",
 "Coefficient d'intégration fiscale moyen des EPCI",
@@ -495,7 +495,7 @@ switch(memoireNiv3){
   case "3":
     cheminMaCarteJSON = cheminMaCarteJSONdep;
     titreLegende = titreLegende[3];
-    sousTitreLegende = sousTitreLegende[1];
+    sousTitreLegende = sousTitreLegende[3];
     choixUnite = choixUnite[1];
     d0 = d0_24;
     d1 = d1_24;
@@ -572,7 +572,7 @@ switch(memoireNiv3){
   case "10":
     cheminMaCarteJSON = cheminMaCarteJSONze;
     titreLegende = titreLegende[10];
-    sousTitreLegende = sousTitreLegende[3];
+    sousTitreLegende = sousTitreLegende[2];
     choixUnite = choixUnite[1];
     d0 = d0_65;
     d1 = d1_65;
