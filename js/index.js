@@ -154,6 +154,7 @@ Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   });
 });
 
+
 //Evenement mouseover
 Array.from(selectionAccueilFacteur).forEach((el,i)=>{
   el.addEventListener("mouseover", function(e){
@@ -475,6 +476,16 @@ Array.from(selectionNiv3).forEach((el,i)=>{
 //Evenement click sur les indicateurs
 
 for (let i=0;i<selectionNiv3.length;i++){
+  selectionNiv3[i].addEventListener("touchstart",function(e){
+    sessionStorage.setItem("memoireNiv3",i);
+    sessionStorage.setItem("memoireIndicateur",e.currentTarget.id);
+    window.location =  "indicateur.html";
+    e.stopPropagation();
+  });
+};
+
+
+for (let i=0;i<selectionNiv3.length;i++){
   selectionNiv3[i].addEventListener("click",function(e){
     sessionStorage.setItem("memoireNiv3",i);
     sessionStorage.setItem("memoireIndicateur",e.currentTarget.id);
@@ -482,6 +493,9 @@ for (let i=0;i<selectionNiv3.length;i++){
     e.stopPropagation();
   });
 };
+
+
+
 
 //Calcul nombre indicateurs
 //let selectionNombreIndicateur = document.querySelector("p>strong");
