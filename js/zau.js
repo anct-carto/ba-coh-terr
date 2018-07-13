@@ -141,9 +141,9 @@ y.domain(d3.extent([ymin,ymax])).nice()
          .style("fill", texture2.url())
          .style("opacity", 0.6);
 
-         //Création de la div pour le popup
-         let popup = d3.select("body").append("div")
-           .attr("class", "mon_popup_zau");
+       //Création de la div pour le popup
+       let popup = d3.select("body").append("div")
+         .attr("class", "mon_popup_zau");
 
 
         //Création de la Légende
@@ -223,69 +223,69 @@ y.domain(d3.extent([ymin,ymax])).nice()
          d3.select("#boutonzau0")
          .on("click",function(d){
 
-           //Style bouton
-           d3.select("#boutonzau0")
-             .style("padding","0.5em 1.3em 1.3em 1.3em")
-           d3.select("#boutonzau1")
-             .style("padding","0.2em 0.3em 0.3em 0.3em")
+         //Style bouton
+         d3.select("#boutonzau0")
+           .style("padding","0.5em 1.3em 1.3em 1.3em")
+         d3.select("#boutonzau1")
+           .style("padding","0.2em 0.3em 0.3em 0.3em")
 
-             data.sort(function(a,b){
-                 return d3.descending(a.value0,b.value0);
-               })
-               x.domain(data.map(function(d){
-                 return d.codzau;
-               }));
-                 g1.selectAll(".bar0zau")
-                 .transition()
-                 .duration(500)
-                 .attr("x",function(d,i){ return x(d.codzau)+10; })
-                 g1.select(".x_axis")
-                 .transition()
-                 .duration(500)
-                 .call(d3.axisBottom(x))
-                 g1.selectAll(".bar1zau")
-                 .transition()
-                 .duration(500)
-                 .attr("x",function(d,i){ return x(d.codzau); })
-             });
-
-
-           //Bouton tri selon year1
-           d3.select("#boutonzau1")
-           .on("click",function(d){
-
-             //Style bouton
-             d3.select("#boutonzau1")
-               .style("padding","0.5em 1.3em 1.3em 1.3em")
-             d3.select("#boutonzau0")
-               .style("padding","0.2em 0.3em 0.3em 0.3em")
+           data.sort(function(a,b){
+               return d3.descending(a.value0,b.value0);
+             })
+             x.domain(data.map(function(d){
+               return d.codzau;
+             }));
+               g1.selectAll(".bar0zau")
+               .transition()
+               .duration(500)
+               .attr("x",function(d,i){ return x(d.codzau)+10; })
+               g1.select(".x_axis")
+               .transition()
+               .duration(500)
+               .call(d3.axisBottom(x))
+               g1.selectAll(".bar1zau")
+               .transition()
+               .duration(500)
+               .attr("x",function(d,i){ return x(d.codzau); })
+           });
 
 
-               data.sort(function(a,b){
-                   return d3.descending(a.value1,b.value1);
-                 })
-                 x.domain(data.map(function(d){
-                   return d.codzau;
-                 }));
-                   g1.selectAll(".bar0zau")
-                   .transition()
-                   .duration(500)
-                   .attr("x",function(d,i){ return x(d.codzau)+10; })
-                   g1.select(".x_axis")
-                   .transition()
-                   .duration(500)
-                   .call(d3.axisBottom(x))
-                   g1.selectAll(".bar1zau")
-                   .transition()
-                   .duration(500)
-                   .attr("x",function(d,i){ return x(d.codzau); })
-               });
+         //Bouton tri selon year1
+         d3.select("#boutonzau1")
+         .on("click",function(d){
+
+         //Style bouton
+         d3.select("#boutonzau1")
+           .style("padding","0.5em 1.3em 1.3em 1.3em")
+         d3.select("#boutonzau0")
+           .style("padding","0.2em 0.3em 0.3em 0.3em")
+
+
+           data.sort(function(a,b){
+               return d3.descending(a.value1,b.value1);
+             })
+             x.domain(data.map(function(d){
+               return d.codzau;
+             }));
+               g1.selectAll(".bar0zau")
+               .transition()
+               .duration(500)
+               .attr("x",function(d,i){ return x(d.codzau)+10; })
+               g1.select(".x_axis")
+               .transition()
+               .duration(500)
+               .call(d3.axisBottom(x))
+               g1.selectAll(".bar1zau")
+               .transition()
+               .duration(500)
+               .attr("x",function(d,i){ return x(d.codzau); })
+           });
 
 
 
-             //Style bouton1
-             d3.select("#boutonzau1")
-                 .style("background-color", maCouleurHisto)
+         //Style bouton1
+         d3.select("#boutonzau1")
+             .style("background-color", maCouleurHisto)
 
 /*
          //Ajout de l'animation barre0

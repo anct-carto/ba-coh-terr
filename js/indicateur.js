@@ -89,7 +89,7 @@ ioDiapoPremiere.observe(document.querySelector('#diapo1'));
 
 */
 
-
+//Supprimer page diapo si pas de données ZAU
 
 
 
@@ -469,6 +469,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(valeurBarometre,valeurBarometre11);
     Array.prototype.push.apply(coord,coord11);
     Array.prototype.push.apply(discretisation,discretisation11);
+
+    document.getElementById("mon_bouton_zau").style.display="none"
     break;
   case "1":
     cheminMaCarteJSON = cheminMaCarteJSONepci2018;
@@ -502,6 +504,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(valeurBarometre,valeurBarometre24);
     Array.prototype.push.apply(coord,coord24);
     Array.prototype.push.apply(discretisation,discretisation24);
+
+    document.getElementById("mon_bouton_zau").style.display="none"
     break;
   case "4":
     cheminMaCarteJSON = cheminMaCarteJSONze;
@@ -535,6 +539,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(valeurBarometre,valeurBarometre46);
     Array.prototype.push.apply(coord,coord46);
     Array.prototype.push.apply(discretisation,discretisation46);
+
+    document.getElementById("mon_bouton_zau").style.display="none"
     break;
   case "7":
     cheminMaCarteJSON = cheminMaCarteJSONdep;
@@ -546,6 +552,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(valeurBarometre,valeurBarometre51);
     Array.prototype.push.apply(coord,coord51);
     Array.prototype.push.apply(discretisation,discretisation51);
+
+    document.getElementById("mon_bouton_zau").style.display="none"
     break;
   case "8":
     cheminMaCarteJSON = cheminMaCarteJSONze;
@@ -568,6 +576,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(valeurBarometre,valeurBarometre61);
     Array.prototype.push.apply(coord,coord61);
     Array.prototype.push.apply(discretisation,discretisation61);
+
+    document.getElementById("mon_bouton_zau").style.display="none"
     break;
   case "10":
     cheminMaCarteJSON = cheminMaCarteJSONze;
@@ -579,6 +589,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(valeurBarometre,valeurBarometre65);
     Array.prototype.push.apply(coord,coord65);
     Array.prototype.push.apply(discretisation,discretisation65);
+
+    document.getElementById("mon_bouton_zau").style.display="none"
     break;
 };
 
