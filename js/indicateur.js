@@ -506,6 +506,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(discretisation,discretisation24);
 
     document.getElementById("mon_bouton_zau").style.display="none"
+    document.getElementsByClassName("point_diapo")[4].style.display="none"
+    document.getElementById("diapo3").nextElementSibling.remove();
     break;
   case "4":
     cheminMaCarteJSON = cheminMaCarteJSONze;
@@ -528,6 +530,7 @@ switch(memoireNiv3){
     Array.prototype.push.apply(valeurBarometre,valeurBarometre44);
     Array.prototype.push.apply(coord,coord44);
     Array.prototype.push.apply(discretisation,discretisation44);
+
     break;
   case "6":
     cheminMaCarteJSON = cheminMaCarteJSONepci2017;
@@ -541,6 +544,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(discretisation,discretisation46);
 
     document.getElementById("mon_bouton_zau").style.display="none"
+    document.getElementsByClassName("point_diapo")[4].style.display="none"
+    document.getElementById("diapo3").nextElementSibling.remove();
     break;
   case "7":
     cheminMaCarteJSON = cheminMaCarteJSONdep;
@@ -554,6 +559,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(discretisation,discretisation51);
 
     document.getElementById("mon_bouton_zau").style.display="none"
+    document.getElementsByClassName("point_diapo")[4].style.display="none"
+    document.getElementById("diapo3").nextElementSibling.remove();
     break;
   case "8":
     cheminMaCarteJSON = cheminMaCarteJSONze;
@@ -578,6 +585,8 @@ switch(memoireNiv3){
     Array.prototype.push.apply(discretisation,discretisation61);
 
     document.getElementById("mon_bouton_zau").style.display="none"
+    document.getElementsByClassName("point_diapo")[4].style.display="none"
+    document.getElementById("diapo3").nextElementSibling.remove();
     break;
   case "10":
     cheminMaCarteJSON = cheminMaCarteJSONze;
