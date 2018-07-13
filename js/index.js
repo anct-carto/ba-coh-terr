@@ -475,14 +475,6 @@ Array.from(selectionNiv3).forEach((el,i)=>{
 
 //Evenement click sur les indicateurs
 
-for (let i=0;i<selectionNiv3.length;i++){
-  selectionNiv3[i].addEventListener("touchstart",function(e){
-    sessionStorage.setItem("memoireNiv3",i);
-    sessionStorage.setItem("memoireIndicateur",e.currentTarget.id);
-    window.location =  "indicateur.html";
-    e.stopPropagation();
-  });
-};
 
 
 for (let i=0;i<selectionNiv3.length;i++){
@@ -490,6 +482,7 @@ for (let i=0;i<selectionNiv3.length;i++){
     sessionStorage.setItem("memoireNiv3",i);
     sessionStorage.setItem("memoireIndicateur",e.currentTarget.id);
     window.location =  "indicateur.html";
+    location.assign("indicateur.html");
     e.stopPropagation();
   });
 };
